@@ -1,0 +1,44 @@
+site_name: Dr. Kornpob Bhirombhakdi — CV
+site_url: https://bkornpob.github.io
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+  font:
+    text: system-ui, -apple-system, sans-serif
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Education: 01-education.md
+  - Certifications: 02-certifications.md
+  - Employment: 03-employment.md
+  - Research: 04-research.md
+  - Achievements: 05-achievements.md
+  - Skills: 06-skills.md
+
+extra:
+  social:
+    - icon: fontawesome/solid/envelope
+      link: mailto:bkornpob@gmail.com
+    - icon: fontawesome/brands/github
+      link: https://github.com/bkornpob
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/bkornpob
+    - icon: fontawesome/solid/globe
+      link: https://bkornpob.github.io
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - attr_list

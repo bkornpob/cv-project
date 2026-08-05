@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+
+\usepackage{geometry}
+\geometry{margin=0.6in}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+% Fonts — change here to taste
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+
+% Thai fallback (polyglossia-style via fontspec)
+\newfontfamily{\thaifont}{Noto Sans Thai}[Script=Thai]
+\newcommand{\thai}[1]{{\thaifont #1}}
+
+% Colors
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  urlcolor=blue!70!black,
+  citecolor=blue!70!black,
+  pdftitle={Dr. Kornpob Bhirombhakdi — CV},
+  pdfauthor={Dr. Kornpob Bhirombhakdi},
+}
+
+% Section heading style
+\titleformat{\section}
+  {\Large\bfseries\sffamily}
+  {}
+  {0pt}
+  {}
+  [\titlerule]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\sffamily}
+  {}
+  {0pt}
+  {}
+
+% Tight lists
+\setlist{nosep}
+\setlist[itemize]{leftmargin=*}
+
+% Document
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+  {\LARGE\bfseries\sffamily Dr. Kornpob Bhirombhakdi}\\[6pt]
+  \textbf{Senior polymath researcher, educator, and consultant}  \\
+  {\small bkornpob@gmail.com $\cdot$ \url{https://bkornpob.github.io} $\cdot$ ORCID: 0000-0003-0136-1281}
+\end{center}
+\vspace{6pt}
+
+\tableofcontents
+\clearpage
+
+$body$
+
+\end{document}
