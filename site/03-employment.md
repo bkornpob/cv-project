@@ -8,7 +8,7 @@ title: "Employment"
 
 **InjectPrompt.com** (Contract), Remote
 
-Jan 2026 – Present
+Jan 2026 – May 2026
 
 Design and maintain AI-prompt knowledge bases and defense systems for red-teaming copilot tools. Design copilot workflows that operationalize this knowledge for structured jailbreak testing of sandboxed AI systems. Lead red-team research on AI agent safety and jailbreak tactics, informing model and system hardening strategies.
 
