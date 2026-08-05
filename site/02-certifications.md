@@ -12,7 +12,7 @@ Jan 2026 – Dec 2028
 
 ## BASI Research Apprentice and Contributor
 
-Active
+Oct 2025 – present
 
 ## Cybersecurity Trainings
 

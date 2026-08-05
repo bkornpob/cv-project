@@ -1,0 +1,20 @@
+# Build artifacts
+site/.rendered/
+pdf/
+
+# Dependencies
+node_modules/
+
+# Python
+scripts/__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
