@@ -1,8 +1,14 @@
----
-title: "Employment"
----
+# Employment
 
-# Recent Employment
+## On-Demand Consultant — Business Analytics & AI Solutions
+
+**DR.KB** (Self-Employed), Bangkok, Thailand
+
+Sep 2025 – Present
+
+- **Strategic Advisory:** Consult C-suite and product leads on AI integration, risk mitigation, and enterprise analytics roadmaps.
+- **Technical Implementation:** Design, build, and deploy custom machine learning models, LLM agents, and automated data pipelines.
+- **Cross-Functional Leadership:** Bridge technical engineering and executive decision-making to drive ROI and project execution.
 
 ## Lead Prompt Security Researcher
 
@@ -10,15 +16,9 @@ title: "Employment"
 
 Jan 2026 – May 2026
 
-Design and maintain AI-prompt knowledge bases and defense systems for red-teaming copilot tools. Design copilot workflows that operationalize this knowledge for structured jailbreak testing of sandboxed AI systems. Lead red-team research on AI agent safety and jailbreak tactics, informing model and system hardening strategies.
-
-## On-Demand Consultant — Business Analytics & AI Solutions
-
-**DR.KB** (Self-Employed), Bangkok, Thailand
-
-Sep 2025 – Present
-
-Integrated consulting across business strategy, technical implementation, and research leadership. Specializes in AI-driven solutions, project initiative leadership, and cross-functional collaboration for complex data challenges.
+- **Red-Teaming Architecture:** Led red-team research on AI agent safety and jailbreak tactics to strengthen model defense interfaces and system resilience.
+- **Workflow & Knowledge Systems:** Designed custom RAG knowledge bases, skills, and orchrestration workflows for sandboxed jailbreak testing.
+- **Research-to-Product:** Authored and released _InjectPrompt Companion 3.0_ and the _Jailbreak Perturbation Framework (JPF)_ to deploy automated AI engines for dynamic jailbreak generation and guardrail robustness testing.
 
 ## Data Scientist
 
@@ -26,42 +26,11 @@ Integrated consulting across business strategy, technical implementation, and re
 
 Aug 2024 – Aug 2025
 
-## Postdoctoral Researcher
-
-**Space Telescope Science Institute** (AURA/NASA), Baltimore, MD, USA
-
-Aug 2019 – Feb 2024
-
-## Research/Teaching Assistant
-
-**Physics and Astronomy Department, Ohio University**, Athens, OH, USA
-
-Aug 2014 – May 2019
-
----
-
-
-# Employment History
-
-## Lead Prompt Security Researcher
-
-**InjectPrompt.com** (Contract), Remote
-
-Jan 2026 – Present
-
-Design and maintain AI-prompt knowledge bases and defense systems for red-teaming copilot tools. Design copilot workflows that operationalize this knowledge for structured jailbreak testing of sandboxed AI systems. Lead red-team research on AI agent safety and jailbreak tactics, informing model and system hardening strategies.
-
-## On-Demand Consultant — Business Analytics & AI Solutions
-
-**DR.KB** (Self-Employed), Bangkok, Thailand
-
-Sep 2025 – Present
-
-## Data Scientist
-
-**Sertis Co., Ltd.**, Bangkok, Thailand
-
-Aug 2024 – Aug 2025
+- **Computer Vision:** Developed deep learning architectures for fine-grained object identification and multi-object tracking in video streams.
+- **Time-Series Forecasting:** Built scalable multi-branch forecasting models for retail and wholesale supply chains, optimizing inventory allocation and demand prediction across multiple retail locations.
+- **ML Asset Maintenance & Governance:** Maintained and optimized enterprise-grade reusable code repositories and ML assets to ensure continuous reliability, scalability, and seamless deployment across internal teams.
+- **Provisional Technical Advisory:** Delivered expert consulting during client engagements, resolving complex technical bottlenecks on demand and pitching high-value extension solutions to drive business expansion.
+- **Technical Client Relations & Strategy:** Served as the direct bridge between technical stakeholders, enterprise clients, and internal business development teams, leading cross-functional alignment and project roadmapping.
 
 ## Postdoctoral Researcher
 

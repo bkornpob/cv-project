@@ -1,7 +1,3 @@
----
-title: "Education"
----
-
 # Education
 
 ## Ph.D. Physics

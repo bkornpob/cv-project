@@ -1,7 +1,3 @@
----
-title: "Certifications & Training"
----
-
 # Certifications & Training
 
 ## Certified in Cybersecurity
@@ -10,7 +6,7 @@ title: "Certifications & Training"
 
 Jan 2026 – Dec 2028
 
-## BASI Research Apprentice and Contributor
+## BASI Research Contributor
 
 Oct 2025 – present
 

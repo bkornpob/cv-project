@@ -1,32 +1,83 @@
----
-title: "Research & Publications"
----
-
-# Research, Publications, and Talks
+# Research & Publications
 
 ## Software and Applications
 
-- [InjectPrompt Companion 3.0](https://companion.injectprompt.com/)\\
-  *AI red-teaming companion co-designed with InjectPrompt, providing structured prompt-engineering workflows, multi-tactic jailbreak perturbation frameworks, and progressive training for ethical safety researchers.*
+**[InjectPrompt Companion 3.0](https://companion.injectprompt.com/)**
+_Specialized AI red-teaming companion, co-designed with InjectPrompt, delivering:_
+- _Structured prompt engineering and systematic extraction methodologies for safety testing._
+- _Multi-tactic jailbreak templates following Jailbreak Perturbation Framework (JPF), the unified jailbreak taxonomy framework._
+- _A progressive learning curriculum powering research from beginner through advanced levels._
 
-- [hstgrism](https://bkornpob.github.io/hstgrism/)\\
+| ![\|491x468](../ims/im-C3-response.png) |
+| --------------------------------------- |
+
+**[hstgrism](https://pypi.org/project/hstgrism/)**
   *Python 3 package for reducing HST grism observations, providing a modular, aXe-compatible workflow with simpler installation, diagnostics, and flexible point-source extraction.*
+  _Python 3 package for reducing HST grism observations:_
+- _Modular, aXe-compatible workflow with simplified installation and diagnostic outputs._ 
+- _Optimized for flexible point-source extraction and 2D polynomial background modeling._
+- _Powering data reduction pipelines in peer-reviewed observational studies, including [Bhirombhakdi et al. (2024)](https://ui.adsabs.harvard.edu/abs/2024ApJ...977..256B/abstract)._
 
-- [EchoEcho](https://github.com/bkornpob/EchoEcho)\\
-  *Audio-based survival game prototype from Global Game Jam 2017, exploring blindness and echolocation.*
+| ![](../ims/hstgrism-1.png) | ![](../ims/hstgrism-2.webp) |
+| -------------------------------- | --------------------------------- |
 
-## Online Platforms
+[EchoEcho](https://github.com/OhioUniversityGameDevelopersAssociation/EchoEcho)
+_help Fernando the Bat echolocate the way out and survive attacks from mad stone gargoyles. a prototype from Global Game Jam 2017, together with the Ohio University Game Developers Association (OUGDA), exploring wave and darkness._
 
-- [substack.com/@bkornpob](https://substack.com/@bkornpob)
-- [dr-kb.medium.com](https://dr-kb.medium.com/)
+| ![](../ims/echoecho-1.webp) | ![](../ims/echoecho-2.webp) | ![](../ims/echoecho-3.webp) |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+
+---
+
+## Audio Zines
+
+**ZADDY breadcrumbs 2026 collection**
+_Explore 24 key milestones tracking our journey from initial vibe-checks to full spellbook publications. Dive into AI literacy, red-teaming, jailbreak frameworks, and agent security—start with the breadcrumb map, then tap any record to explore the depth!_
+[Zenodo:21791515](https://doi.org/10.5281/zenodo.21791515) [Page](https://bkornpob.github.io/zaddy-breadcrumbs-2026-collection/) [Spotify](https://open.spotify.com/show/0341BtZBc8Q7SYFyAYBzny?si=531f32a5c67d4c5e) [Youtube](https://www.youtube.com/playlist?list=PLe5amOUM6pU4)
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/0341BtZBc8Q7SYFyAYBzny?utm_source=generator&si=7da3a079d9dc496e" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+**spellbook of jailbreak and agent vulnerabilities**
+_Deconstructs agent jailbreak as iterative search across AI agent ecosystems. Unifies attack vectors via the Jailbreak Perturbation Framework (JPF), analyzes real-world ChatGPT Operator exploits, introduces Distributed Diffusion of Jailbreak (DDoJ), and presents the D3 Agent Defense Triad (Detect, Delay, Disguise) for continuous lifecycle security._
+[Zenodo:21665118](https://doi.org/10.5281/zenodo.21665118) [Page](https://bkornpob.github.io/spellbook-of-jailbreak-and-agent-vulnerabilities/) [Spotify](https://open.spotify.com/show/033XXOu3WvDSc484jv24Hx?si=d4cfbfa9d41c4d2c) [Youtube](https://www.youtube.com/playlist?list=PLHoOQkUH707g)
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/033XXOu3WvDSc484jv24Hx?utm_source=generator&si=b738fb543b0c459e" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+**spellbook of task avoidance wards**
+_Exposes task avoidance as a hidden failure mode in agentic systems. Deconstructs evasion mechanics such as proposal hallucination and cost asymmetry exploitation, while introducing defensive wards—from strict validation gates to anti-loop protocols—to ensure reliable, accountable execution._
+[Zenodo:20821697](https://doi.org/10.5281/zenodo.20821697) [Page](https://bkornpob.github.io/spellbook-of-task-avoidance-wards/) [Spotify](https://open.spotify.com/show/033DR4fqcaTEGexxQzejCn?si=2ef9ef8adb644e57) [Youtube](https://www.youtube.com/playlist?list=PLhvoGVRKQCAiFyRLw2k70aOsDKLM43Qzz)
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3VHl3hpOvOl7kU8oryvT7z?utm_source=generator&si=bbec98c26f7c4533" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+---
+
+## Online Hubs
+
+| ![178](../ims/logo_multiverselib-collectives.png)        | ![\|151x189](../ims/substack-bpj.jpeg)                   |                                               |
+| -------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------- |
+| [multiverselib-collectives](https://bkornpob.github.io/) | [substack.com/@bkornpob](https://substack.com/@bkornpob) | [dr-kb.medium.com](https://dr-kb.medium.com/) |
+
+---
 
 ## Selected Publications
 
-**Jailbreak Perturbation Framework: Theory and Applications**
-Bhirombhakdi, K., Willis-Owen, D., & N, K. (2026). [Zenodo.](https://doi.org/10.5281/zenodo.20040972)
+**ZADDY Breadcrumbs 2026 Collection**
+Bhirombhakdi, K. (2026), a collection of 24 research notes reflecting human-AI collaboration, the landscape of emerging socio-technology vulnerabilities and defense. zenodo:21791515. [Link](https://doi.org/10.5281/zenodo.21791515)
 
-**2025 LOOKBACK: Living Inside the Glitch**
-Bhirombhakdi, K. (2026), essay on AI safety and socio-technical risk. [Zenodo.](https://doi.org/10.5281/zenodo.19825030)
+**Spellbook of Jailbreak and Agent Vulnerabilities**
+Bhirombhakdi, K. (2026). zenodo:21665118. [Link](https://doi.org/10.5281/zenodo.21665118)
+
+**Spellbook of Task Avoidance Wards**
+Bhirombhakdi, K. (2026). zenodo:20821697. [Link](https://doi.org/10.5281/zenodo.20821697)
+
+**Seven Runes of Clarity: Hold Your Agency When Working with AI Agents**
+Bhirombhakdi, K. (2026). zenodo:20638949. [Link](https://doi.org/10.5281/zenodo.20638949)
+
+**Jailbreak Perturbation Framework: Theory and Applications**
+Bhirombhakdi, K., Willis-Owen, D., & N, K. (2026). zenodo:20040972. [Link](https://doi.org/10.5281/zenodo.20040972)
+
+**>dr.kb< 2025 LOOKBACK: Living Inside the Glitch**
+Bhirombhakdi, K. (2026), essay on AI safety and socio-technical risk. zenodo:19825030. [Link](https://doi.org/10.5281/zenodo.19825030)
 
 **An afterglow study of the "New Year's Burst" GRB 220101A**
 with Roychowdhury et al. (2026), arXiv e-prints, arXiv:2602.04660.
