@@ -8,8 +8,8 @@ _Specialized AI red-teaming companion, co-designed with InjectPrompt, delivering
 - _Multi-tactic jailbreak templates following Jailbreak Perturbation Framework (JPF), the unified jailbreak taxonomy framework._
 - _A progressive learning curriculum powering research from beginner through advanced levels._
 
-| ![\|491x468](../ims/im-C3-response.png) |
-| --------------------------------------- |
+| ![InjectPrompt Companion 3.0 (#C3) Response Audit](../ims/im-C3-response.png) |
+| :---------------------------------------------------------------------------: |
 
 **[hstgrism](https://pypi.org/project/hstgrism/)**
   *Python 3 package for reducing HST grism observations, providing a modular, aXe-compatible workflow with simpler installation, diagnostics, and flexible point-source extraction.*
@@ -19,7 +19,8 @@ _Specialized AI red-teaming companion, co-designed with InjectPrompt, delivering
 - _Powering data reduction pipelines in peer-reviewed observational studies, including [Bhirombhakdi et al. (2024)](https://ui.adsabs.harvard.edu/abs/2024ApJ...977..256B/abstract)._
 
 | ![](../ims/hstgrism-1.png) | ![](../ims/hstgrism-2.webp) |
-| -------------------------------- | --------------------------------- |
+| -------------------------- | --------------------------- |
+
 
 [EchoEcho](https://github.com/OhioUniversityGameDevelopersAssociation/EchoEcho)
 _help Fernando the Bat echolocate the way out and survive attacks from mad stone gargoyles. a prototype from Global Game Jam 2017, together with the Ohio University Game Developers Association (OUGDA), exploring wave and darkness._
@@ -53,13 +54,13 @@ _Exposes task avoidance as a hidden failure mode in agentic systems. Deconstruct
 
 ## Online Hubs
 
-| ![178](../ims/logo_multiverselib-collectives.png)        | ![\|151x189](../ims/substack-bpj.jpeg)                   |                                               |
-| -------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------- |
-| [multiverselib-collectives](https://bkornpob.github.io/) | [substack.com/@bkornpob](https://substack.com/@bkornpob) | [dr-kb.medium.com](https://dr-kb.medium.com/) |
+| ![178](../ims/logo_multiverselib-collectives.png)        | ![\|151x189](../ims/substack-bpj.jpeg)                   |
+| -------------------------------------------------------- | -------------------------------------------------------- |
+| [multiverselib-collectives](https://bkornpob.github.io/) | [substack.com/@bkornpob](https://substack.com/@bkornpob) |
 
 ---
 
-## Selected Publications
+## Publications
 
 **ZADDY Breadcrumbs 2026 Collection**
 Bhirombhakdi, K. (2026), a collection of 24 research notes reflecting human-AI collaboration, the landscape of emerging socio-technology vulnerabilities and defense. zenodo:21791515. [Link](https://doi.org/10.5281/zenodo.21791515)
