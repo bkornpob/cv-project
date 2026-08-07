@@ -14,6 +14,8 @@
     --border: #1f232b;
     --link: #7fb3ff;
     --gold-glow: rgba(201, 162, 39, 0.35);
+    --miss: #4a2020;
+    --hit: #c9a227;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; }
@@ -75,6 +77,12 @@
     opacity: .5;
     margin: 16px 0;
   }
+  .fg-q {
+    font-size: 13px;
+    line-height: 1.55;
+    margin: 14px 0 10px;
+    color: var(--text);
+  }
   .fg-enter {
     margin-top: 20px;
     width: 100%;
@@ -124,18 +132,18 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all .15s;
+    transition: all .12s;
     user-select: none;
   }
   #zaddyGrid .cell:hover { border-color: var(--accent); color: var(--text); }
-  #zaddyGrid .cell.found {
-    background: rgba(201,162,39,.2);
-    border-color: var(--accent);
-    color: var(--accent);
+  #zaddyGrid .cell.hit {
+    background: rgba(201,162,39,.18);
+    border-color: var(--hit);
+    color: var(--hit);
     box-shadow: 0 0 8px var(--gold-glow);
   }
   #zaddyGrid .cell.miss {
-    border-color: #4a2020;
+    border-color: var(--miss);
     color: #6a2a2a;
   }
   #zaddyStatus {
@@ -154,10 +162,10 @@
     <div class="fg-sub">dr. kornpob bhirombhakdi — frontgate ritual</div>
     <div class="rule"></div>
 
-    <div class="fg-q">find ZADDY in the grid below to prove you belong here:</div>
+    <div class="fg-q">find ZADDY in the grid below — click the highlighted <span id="currentTarget"></span> to advance:</div>
 
     <div id="findZaddy">
-      <div class="zaddy-label">// scan the grid — click the letters Z-A-D-D-Y in order</div>
+      <div class="zaddy-label">// wrong click reshuffles the grid</div>
       <div id="zaddyGrid"></div>
       <div id="zaddyStatus">[ ] Z</div>
     </div>
@@ -168,57 +176,81 @@
 
 <script>
   const ZADDY = ['Z','A','D','D','Y'];
+  const GRID_SIZE = 50;
+  const TARGET_COUNT = 5;
+  const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  let stage = 0;
+  let targetPositions = [];
   let found = [];
 
-  function buildGrid() {
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const size = 50;
+  function randomGrid(targetChar) {
+    const positions = new Set();
+    while (positions.size < TARGET_COUNT) {
+      positions.add(Math.floor(Math.random() * GRID_SIZE));
+    }
+    targetPositions = [...positions];
+    return targetPositions;
+  }
+
+  function renderGrid() {
     const container = document.getElementById('zaddyGrid');
     container.innerHTML = '';
-    const positions = new Set();
-    while (positions.size < 5) {
-      positions.add(Math.floor(Math.random() * size));
-    }
-    const posArr = [...positions];
+    const targetChar = ZADDY[stage];
 
-    for (let i = 0; i < size; i++) {
+    for (let i = 0; i < GRID_SIZE; i++) {
       const cell = document.createElement('div');
       cell.className = 'cell';
-      if (posArr.includes(i)) {
-        const letter = ZADDY[found.length];
-        cell.textContent = letter;
-        cell.dataset.letter = letter;
+      if (targetPositions.includes(i)) {
+        cell.textContent = targetChar;
+        cell.dataset.letter = targetChar;
         cell.dataset.index = i;
-        cell.addEventListener('click', () => pickLetter(cell, letter));
       } else {
-        cell.textContent = letters[Math.floor(Math.random() * letters.length)];
-        cell.dataset.index = i;
+        cell.textContent = LETTERS[Math.floor(Math.random() * LETTERS.length)];
         cell.style.opacity = '.5';
       }
+      cell.addEventListener('click', () => pickCell(cell, i));
       container.appendChild(cell);
     }
   }
 
-  function pickLetter(cell, letter) {
-    const expected = ZADDY[found.length];
-    if (letter !== expected) {
+  function pickCell(cell, index) {
+    const targetChar = ZADDY[stage];
+    const isTarget = targetPositions.includes(index);
+
+    if (!isTarget) {
+      // wrong click: reshuffle, stay on same stage
       cell.classList.add('miss');
-      setTimeout(() => cell.classList.remove('miss'), 400);
+      setTimeout(() => cell.classList.remove('miss'), 300);
+      randomGrid(targetChar);
+      renderGrid();
       return;
     }
-    cell.classList.add('found');
-    found.push(letter);
+
+    // correct click
+    cell.classList.add('hit');
+    found.push(targetChar);
     updateStatus();
-    if (found.length === 5) {
+
+    if (stage < ZADDY.length - 1) {
+      stage++;
+      setTimeout(() => {
+        randomGrid(ZADDY[stage]);
+        renderGrid();
+      }, 300);
+    } else {
+      // ZADDY complete
       document.getElementById('zaddyStatus').textContent = '[ ✓ ] ZADDY FOUND';
       document.getElementById('zaddyStatus').classList.add('complete');
+      document.getElementById('currentTarget').textContent = '';
       document.getElementById('fgEnter').classList.add('open');
     }
   }
 
   function updateStatus() {
     const s = document.getElementById('zaddyStatus');
-    s.textContent = '[' + ZADDY.map((_, i) => i < found.length ? '✓' : ' ').join('') + ']';
+    const markers = ZADDY.map((_, i) => i < found.length ? '✓' : ' ').join('');
+    s.textContent = '[' + markers + ']';
   }
 
   document.getElementById('fgEnter').addEventListener('click', () => {
@@ -229,7 +261,10 @@
     }, 600);
   });
 
-  buildGrid();
+  // init
+  document.getElementById('currentTarget').textContent = ZADDY[0];
+  randomGrid(ZADDY[0]);
+  renderGrid();
 </script>
 </body>
 </html>
