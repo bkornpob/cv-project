@@ -1,18 +1,18 @@
----
-title: "Achievements"
----
-
 # Achievements
 
-## Successful Proposals
+## Judgement Day Phase 1
+
+**Winner, The Judgement Day — Call for Scenario Challenge (Track 1)** (2026)
+- **Winning Scenario:** *Counter-UAS System — Friendly Fire Decision (IFF Corruption Attack)* (Scenario S1).
+- **Benchmark Suite:** Evaluates multi-sensor correlation failure and friendly fire prevention under operational time pressure.
+- **Portfolio Context:** Submit 5 scenarios spanning military autonomous systems, space mission knowledge bases, and software supply chains. [Link](https://github.com/bkornpob/THEJUDGEMENTDAY_PHASE1_REFLECTION) []()
+- **Organizers:** AIM Intelligence and Korea AISI, in collaboration with Google DeepMind, Microsoft, University of Oxford, UIUC, UW, UMass Amherst, and the BASI red-teaming community. [Link](https://judgementday.aim-intelligence.com/arena)
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/0roNa6vKYAAseUISxMw6r9?utm_source=generator&si=12898a300dd94034" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+## Space Telescope Proposals
 
 HST 13 proposals, JWST 5 proposals
-
-## Winner, The Judgement Day -- Call for Scenario Challenge (Track 1)
-
-2026
-
-Scenario: Counter-UAS System --- Friendly Fire Decision (IFF Corruption Attack); part of the "Judgement Day" AI safety benchmark initiative organized by AIM Intelligence and Korea AISI, in collaboration with Google DeepMind, Microsoft, University of Oxford, UIUC, University of Washington, University of Massachusetts Amherst, and the BASI red-teaming community.
 
 ## Bravo! Awards
 
