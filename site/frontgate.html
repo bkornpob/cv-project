@@ -37,10 +37,19 @@
     z-index: 0;
   }
   #frontgate {
-    position: relative;
-    z-index: 10;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: rgba(11,12,16,.97);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  #frontgate.hidden { display: none; }
+  .fg-card {
     max-width: 640px;
-    width: 90%;
+    width: 100%;
     border: 1px solid var(--border);
     background: var(--surface);
     padding: 32px;
