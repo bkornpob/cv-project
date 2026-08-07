@@ -1,90 +1,78 @@
 # Education
 
-## Summary
-
-**AI Security Researcher, Educator, and Consultant** — a polymath scholar with dual PhDs in Astrophysics and Game Theory, NASA postdoctoral research, medicine and health-economics foundations dedicated to solve high-stakes AI safety challenges. Combines deep expertise across enterprise data science and agent development with proven red-teaming leadership—author of the _Spellbook of Jailbreak and Agent Vulnerabilities_ and Winner at _The Judgement Day 2026 Phase-1 Scenario Submission_.
-
-## Quick Links
-
-- 📧 [bkornpob@gmail.com](mailto:bkornpob@gmail.com)
-- 🌐 [bkornpob.github.io](https://bkornpob.github.io)
-- 🔗 [ORCID: 0000-0003-0136-1281](https://orcid.org/0000-0003-0136-1281)
-
-## Something
-
-### Ph.D. Physics
+## Ph.D. Physics
 
 **Ohio University** (2014--2019)
 
 *Light Curve Powering Mechanism of Superluminous Supernovae*
 
-### Ph.D. Economics
+## Ph.D. Economics
 
 **Chulalongkorn University** (2009--2013)
 
 *Game Theory & Experimental Studies on Reciprocity*
 
-### M.S. Physics
+## M.S. Physics
 
 **Ohio University** (2014--2015)
 
 GPA: 3.951
 
-### M.S. Health Economics
+## M.S. Health Economics
 
 **Chulalongkorn University** (2007--2009)
 
 *Technical Efficiency of University Hospitals*
 
-### B.S. Medical Science
+## B.S. Medical Science
 
 **Siriraj, Mahidol University** (2003--2007)
 
 Second Class Honours
 
-### Physics Pre-Degree
+## Physics Pre-Degree
 
 **Ramkhamhaeng University** (2013--2014)
 
 GPA: 4.0
 
-### Certifications & Training
+## Certifications & Training
 
-#### Certified in Cybersecurity
+### Certified in Cybersecurity
 
 **ISC2** — ID: [3153050](https://my.isc2.org/digitalcert?_gl=1*fl1nys*_gcl_au*MTA5NjMxNTE1NS4xNzY0ODM4ODk2*_ga*MzUyMjUyMzM0LjE3NjQ4Mzg4OTY.*_ga_7V1PGHSZT0*czE3NjQ4Mzg5NzUkajU5JGwwJGgxMjI0ODk5Nzc1)
 
 Jan 2026 – Dec 2028
 
-#### BASI Research Contributor
+### BASI Research Contributor
 
 Oct 2025 – present
 
-#### Cybersecurity Trainings
+### Cybersecurity Trainings
 
 **THNCA+NCSA Thailand 2025**
 
 Courses: CompTIA Cloud+, Computer Hacking Forensic Investigator, Basic Penetration Testing
 
-#### Cybersecurity Professional Course
+### Cybersecurity Professional Course
 
 **NCSA Thailand** — ID: [5241057415KP](https://learn.thnca.or.th/pluginfile.php/1/tool_certificate/issues/1755622029/5241057415KP.pdf)
 
 2025
 
-#### Basic Cybersecurity
+### Basic Cybersecurity
 
 **NCSA Thailand** — ID: [SPG-ZNEXJM1UDTRGX](https://media.mooc.ncsa.or.th/certificate/ZNEXJM1UDTRGX.pdf)
 
 2025
 
-#### Deep Learning Specialization
+### Deep Learning Specialization
 
 **DeepLearning.AI (Coursera)** — ID: [GYIBDXJ9UMCP](https://www.coursera.org/account/accomplishments/specialization/GYIBDXJ9UMCP)
 
 2025
 
-#### Data Science and Machine Learning Specialization
+### Data Science and Machine Learning Specialization
 
 **Johns Hopkins University (Coursera)** 2015 – 2017
 
