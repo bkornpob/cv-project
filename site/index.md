@@ -9,7 +9,3 @@
 - 📧 [bkornpob@gmail.com](mailto:bkornpob@gmail.com)
 - 🌐 [bkornpob.github.io](https://bkornpob.github.io)
 - 🔗 [ORCID: 0000-0003-0136-1281](https://orcid.org/0000-0003-0136-1281)
-
----
-
-## Quick Links

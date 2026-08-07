@@ -384,7 +384,7 @@ const frontgateStyles = styleMatch ? styleMatch[1].trim() : '';
 const overlayMatch = frontgateRaw.match(/(<div id="frontgate">[\s\S]*?<\/div>\s*<script>[\s\S]*?<\/script>)/);
 const frontgateOverlay = overlayMatch ? overlayMatch[1].trim() : '';
 
-const homeContent = homeHtml.replace(/<h1[^>]*>.*?<\/h1>/, '') + sections.map(s => `<section>\n<h2><a href="${s.file}">${s.title}</a></h2>\n<div class="meta">${s.file.replace(/\.html$/, '')}</div>\n</section>`).join('\n');
+const homeContent = homeHtml.replace(/<h1[^>]*>.*?<\/h1>/, '').replace(/<h2>.*?Sections.*?<\/h2>[\s\S]*/, '');
 
 // Build clean landing page without frontgate overlay
 const homePage = pageTemplate(homeContent, { title: 'landing-page' }, true)
