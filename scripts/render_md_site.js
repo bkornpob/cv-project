@@ -207,9 +207,14 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
 </body>
 </html>`;
 
-// home page
+const frontgateHtml = fs.readFileSync(path.join(root, 'frontgate.html'), 'utf8');
+
 const homeContent = homeHtml.replace(/<h1[^>]*>.*?<\/h1>/, '') + sections.map(s => `<section>\n<h2><a href="${s.file}">${s.title}</a></h2>\n<div class="meta">${s.file.replace(/\.html$/, '')}</div>\n</section>`).join('\n');
-fs.writeFileSync(path.join(outDir, 'index.html'), pageTemplate(homeContent, { title: 'home' }, true));
+const homePage = pageTemplate(homeContent, { title: 'home' }, true);
+
+// Inject frontgate overlay into home page
+const homeWithFrontgate = homePage.replace('</body>', frontgateHtml.replace('<!DOCTYPE html>', '').replace('<html lang="en">\n<head>\n<meta charset="utf-8" />\n<title>find ZADDY — dr. kornpob bhirombhakdi</title>\n<style>', '<style>').replace('</style>\n</head>\n<body>', '').replace('</body>\n</html>', '') + '\n</body>');
+fs.writeFileSync(path.join(outDir, 'index.html'), homeWithFrontgate);
 
 // section pages
 for (const s of sections) {
