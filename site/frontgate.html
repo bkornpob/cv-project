@@ -75,34 +75,6 @@
     opacity: .5;
     margin: 16px 0;
   }
-  .fg-q {
-    font-size: 13px;
-    line-height: 1.55;
-    margin: 14px 0 10px;
-    color: var(--text);
-  }
-  .fg-choices {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 6px;
-  }
-  .fg-choices button {
-    flex: 1;
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 8px;
-    font-family: inherit;
-    cursor: pointer;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-  .fg-choices button:hover { border-color: var(--accent); color: var(--accent); }
-  .fg-choices button.picked {
-    background: rgba(201,162,39,.12);
-    border-color: var(--accent);
-    color: var(--accent);
-  }
   .fg-enter {
     margin-top: 20px;
     width: 100%;
@@ -177,37 +149,24 @@
 <body>
 
 <div id="frontgate">
-  <div class="fg-title">MULTIVERSELIB COLLECTIVES</div>
-  <div class="fg-sub">dr. kornpob bhirombhakdi — frontgate ritual</div>
-  <div class="rule"></div>
+  <div class="fg-card">
+    <div class="fg-title">MULTIVERSELIB COLLECTIVES</div>
+    <div class="fg-sub">dr. kornpob bhirombhakdi — frontgate ritual</div>
+    <div class="rule"></div>
 
-  <div class="fg-q">1. do you seek the spellbook of jailbreak & agent vulnerabilities?</div>
-  <div class="fg-choices" data-q="0">
-    <button value="yes">Y</button>
-    <button value="no">N</button>
-    <button value="idgaf">idgaf</button>
+    <div class="fg-q">find ZADDY in the grid below to prove you belong here:</div>
+
+    <div id="findZaddy">
+      <div class="zaddy-label">// scan the grid — click the letters Z-A-D-D-Y in order</div>
+      <div id="zaddyGrid"></div>
+      <div id="zaddyStatus">[ ] Z</div>
+    </div>
+
+    <button class="fg-enter" id="fgEnter">continue to library →</button>
   </div>
-
-  <div class="fg-q">2. do you understand the D3 triad — detect, delay, disguise — is the recommended defense posture?</div>
-  <div class="fg-choices" data-q="1">
-    <button value="yes">Y</button>
-    <button value="no">N</button>
-    <button value="idgaf">idgaf</button>
-  </div>
-
-  <div class="fg-q">3. find ZADDY in the grid below to prove you belong here:</div>
-
-  <div id="findZaddy">
-    <div class="zaddy-label">// scan the grid — click the letters Z-A-D-D-Y in order</div>
-    <div id="zaddyGrid"></div>
-    <div id="zaddyStatus">[ ] Z</div>
-  </div>
-
-  <button class="fg-enter" id="fgEnter">continue to library →</button>
 </div>
 
 <script>
-  const answers = {};
   const ZADDY = ['Z','A','D','D','Y'];
   let found = [];
 
@@ -253,39 +212,14 @@
     if (found.length === 5) {
       document.getElementById('zaddyStatus').textContent = '[ ✓ ] ZADDY FOUND';
       document.getElementById('zaddyStatus').classList.add('complete');
-      setTimeout(() => {
-        found = [];
-        buildGrid();
-        updateStatus();
-      }, 800);
+      document.getElementById('fgEnter').classList.add('open');
     }
-    checkFrontgate();
   }
 
   function updateStatus() {
     const s = document.getElementById('zaddyStatus');
-    const markers = ['[', '', ']'];
     s.textContent = '[' + ZADDY.map((_, i) => i < found.length ? '✓' : ' ').join('') + ']';
   }
-
-  function checkFrontgate() {
-    const q0 = answers['0'] === 'yes' || answers['0'] === 'idgaf';
-    const q1 = answers['1'] === 'yes' || answers['1'] === 'idgaf';
-    const zaddyDone = found.length >= 5;
-    document.getElementById('fgEnter').classList.toggle('open', q0 && q1 && zaddyDone);
-  }
-
-  document.querySelectorAll('.fg-choices').forEach(group => {
-    const q = group.dataset.q;
-    group.querySelectorAll('button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        group.querySelectorAll('button').forEach(b => b.classList.remove('picked'));
-        btn.classList.add('picked');
-        answers[q] = btn.value;
-        checkFrontgate();
-      });
-    });
-  });
 
   document.getElementById('fgEnter').addEventListener('click', () => {
     document.getElementById('frontgate').style.transition = 'opacity .6s';
