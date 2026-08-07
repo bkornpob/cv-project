@@ -228,6 +228,39 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     border: 1px solid var(--border);
   }
 
+  /* ---------- CONTENT STYLING ---------- */
+  .content-area .node {
+    margin: 18px 0;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 10px;
+  }
+  .content-area .heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 10px;
+  }
+  .content-area .meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 8px;
+  }
+  .content-area .bullets {
+    padding-left: 18px;
+    margin: 0;
+  }
+  .content-area .bullets li {
+    margin: 5px 0;
+  }
+  .content-area .vibe {
+    font-size: 13px;
+    color: var(--accent);
+    opacity: .9;
+    margin-top: 10px;
+  }
+
   .layout {
     display: flex;
     min-height: calc(100vh - 0px);
@@ -370,6 +403,47 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
         localStorage.setItem('mlc-vibe', btn.dataset.vibe);
       });
     });
+
+    const contentArea = document.querySelector('.content-area');
+    if (contentArea) {
+      const frag = document.createDocumentFragment();
+      contentArea.childNodes.forEach((node) => {
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          const tag = node.tagName.toLowerCase();
+          const wrap = document.createElement('div');
+          wrap.className = 'node';
+
+          if (/^h[1-3]$/.test(tag)) {
+            const h = document.createElement('div');
+            h.className = 'heading';
+            h.innerHTML = node.outerHTML;
+            wrap.appendChild(h);
+          } else if (tag === 'ul' || tag === 'ol') {
+            node.classList.add('bullets');
+            wrap.appendChild(node);
+          } else if (tag === 'p') {
+            const text = node.textContent.trim();
+            if (text.startsWith('**') || text.startsWith('*') || text.includes('Professor') || text.includes('University') || text.includes('GPA')) {
+              const meta = document.createElement('div');
+              meta.className = 'meta';
+              meta.innerHTML = node.outerHTML;
+              wrap.appendChild(meta);
+            } else {
+              wrap.appendChild(node);
+            }
+          } else if (tag === 'blockquote' || tag === 'hr') {
+            node.classList.add('vibe');
+            wrap.appendChild(node);
+          } else {
+            wrap.appendChild(node);
+          }
+
+          frag.appendChild(wrap);
+        }
+      });
+      contentArea.innerHTML = '';
+      contentArea.appendChild(frag);
+    }
   </script>
 </body>
 </html>`;
