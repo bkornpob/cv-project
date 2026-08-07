@@ -194,7 +194,7 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
   </header>
   <nav>
     <ul class="nav">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="landing-page.html">Home</a></li>
       ${nav}
     </ul>
   </nav>
@@ -207,18 +207,32 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
 </body>
 </html>`;
 
-const frontgateHtml = fs.readFileSync(path.join(root, 'frontgate.html'), 'utf8');
+const frontgateRaw = fs.readFileSync(path.join(root, 'frontgate.html'), 'utf8');
+
+// Extract frontgate styles
+const styleMatch = frontgateRaw.match(/<style>([\s\S]*?)<\/style>/);
+const frontgateStyles = styleMatch ? styleMatch[1].trim() : '';
+
+// Extract frontgate overlay HTML (div + script)
+const overlayMatch = frontgateRaw.match(/(<div id="frontgate">[\s\S]*?<\/div>\s*<script>[\s\S]*?<\/script>)/);
+const frontgateOverlay = overlayMatch ? overlayMatch[1].trim() : '';
 
 const homeContent = homeHtml.replace(/<h1[^>]*>.*?<\/h1>/, '') + sections.map(s => `<section>\n<h2><a href="${s.file}">${s.title}</a></h2>\n<div class="meta">${s.file.replace(/\.html$/, '')}</div>\n</section>`).join('\n');
-const homePage = pageTemplate(homeContent, { title: 'home' }, true);
 
-// Inject frontgate overlay into home page
-const homeWithFrontgate = homePage.replace('</body>', frontgateHtml.replace('<!DOCTYPE html>', '').replace('<html lang="en">\n<head>\n<meta charset="utf-8" />\n<title>find ZADDY — dr. kornpob bhirombhakdi</title>\n<style>', '<style>').replace('</style>\n</head>\n<body>', '').replace('</body>\n</html>', '') + '\n</body>');
-fs.writeFileSync(path.join(outDir, 'index.html'), homeWithFrontgate);
+// Build clean landing page without frontgate overlay
+const homePage = pageTemplate(homeContent, { title: 'landing-page' }, true)
+  .replace('<a href="index.html">Home</a>', '<a href="landing-page.html">Home</a>')
+  .replace('<a href="index.html">home</a>', '<a href="landing-page.html">home</a>');
+
+fs.writeFileSync(path.join(outDir, 'landing-page.html'), homePage);
+
+// index.html is the frontgate entry point
+const frontgateForIndex = frontgateRaw.replace('window.location.href = \'index.html\'', 'window.location.href = \'landing-page.html\'');
+fs.writeFileSync(path.join(outDir, 'index.html'), frontgateForIndex);
 
 // section pages
 for (const s of sections) {
   fs.writeFileSync(path.join(outDir, s.file), pageTemplate(`<section>\n${s.html}\n</section>`, s, false));
 }
 
-console.log('Rendered', sections.length + 1, 'pages to', outDir);
+console.log('Rendered', sections.length + 2, 'pages to', outDir);
