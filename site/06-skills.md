@@ -1,7 +1,3 @@
----
-title: "Skills"
----
-
 # Skills
 
 ## Technical Skills

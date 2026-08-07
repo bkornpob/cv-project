@@ -54,7 +54,7 @@ _Exposes task avoidance as a hidden failure mode in agentic systems. Deconstruct
 
 ## Online Hubs
 
-|    ![400](../ims/logo_multiverselib-collectives.png)     |          ![\|151x189](../ims/substack-bpj.jpeg)          |        ![[04-research-1786070104143.webp]]         |
+|    ![400](../ims/logo_multiverselib-collectives.png)     |          ![\|151x189](../ims/substack-bpj.jpeg)          |     ![[../ims/04-research-1786070104143.webp]]     |
 | :------------------------------------------------------: | :------------------------------------------------------: | :------------------------------------------------: |
 | [multiverselib-collectives](https://bkornpob.github.io/) | [substack.com/@bkornpob](https://substack.com/@bkornpob) | [old-dr-kb-hub](https://kbhirombhakdi.weebly.com/) |
 

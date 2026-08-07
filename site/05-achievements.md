@@ -12,7 +12,10 @@
 
 ## Space Telescope Proposals
 
-HST 13 proposals, JWST 5 proposals
+HST 14 proposals, JWST 6 proposals
+
+| ![[../ims/05-achievements-1786071466311.webp\|264x280]] | ![[../ims/05-achievements-1786071550723.webp]] |
+| ------------------------------------------------ | --------------------------------------- |
 
 ## Bravo! Awards
 
@@ -20,6 +23,10 @@ issued by the Space Telescope Science Institute (AURA/NASA)
 
 - Hosting the Loyola University Physics Club on February 20, 2020
 - Contributing in Astrogrism Sprint during May 12--21, 2020
+
+| ![](../ims/bravo-loyola.jpg) | ![](../ims/bravo-astrogrism.jpg) |
+| ---------------------------- | -------------------------------- |
+|                              |                                  |
 
 ## Graduate Awards
 
