@@ -95,8 +95,8 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     align-items: center;
     gap: 8px;
   }
-  .brand img {
-    height: 28px;
+  .brand img, .theme-logo {
+    height: 50px;
     width: auto;
     border: none;
     border-radius: 0;
