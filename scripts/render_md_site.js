@@ -88,9 +88,21 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     flex-wrap: wrap;
   }
   .brand {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand img {
+    height: 28px;
+    width: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    display: inline-block;
   }
   .meta {
     margin-top: 4px;
@@ -266,7 +278,8 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
       <div class="meta">${isHome ? 'AI Security Researcher, Educator, and Consultant · bkornpob@gmail.com · ORCID 0000-0003-0136-1281' : 'bkornpob@gmail.com · <a href="https://bkornpob.github.io">bkornpob.github.io</a> · ORCID 0000-0003-0136-1281'}</div>
     </div>
     <div class="theme-switch">
-      <span class="theme-label">vibe</span>
+      <img src="assets/Logo_multiverselib-collectives.png" alt="multiverselib-collectives" class="theme-logo">
+      <span class="theme-label">multiverselib-collectives</span>
       <button data-vibe="vibe-zaddy">zaddy</button>
       <button data-vibe="vibe-gdk">gdk</button>
       <button data-vibe="vibe-dab">dab</button>
