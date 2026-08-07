@@ -1,51 +1,72 @@
+---
+title: "Research & Publications"
+---
+
 # Research & Publications
 
 ## Software and Applications
 
 **[InjectPrompt Companion 3.0](https://companion.injectprompt.com/)**
+
 _Specialized AI red-teaming companion, co-designed with InjectPrompt, delivering:_
+
 - _Structured prompt engineering and systematic extraction methodologies for safety testing._
 - _Multi-tactic jailbreak templates following Jailbreak Perturbation Framework (JPF), the unified jailbreak taxonomy framework._
 - _A progressive learning curriculum powering research from beginner through advanced levels._
 
-| ![InjectPrompt Companion 3.0 (#C3) Response Audit](../ims/im-C3-response.png) |
-| :---------------------------------------------------------------------------: |
+
+![InjectPrompt Companion 3.0 (#C3) Response Audit](../ims/im-C3-response.png){ width="100%" }
+
 
 **[hstgrism](https://pypi.org/project/hstgrism/)**
-  *Python 3 package for reducing HST grism observations, providing a modular, aXe-compatible workflow with simpler installation, diagnostics, and flexible point-source extraction.*
-  _Python 3 package for reducing HST grism observations:_
-- _Modular, aXe-compatible workflow with simplified installation and diagnostic outputs._ 
+
+_Python 3 package for reducing HST grism observations, providing a modular, aXe-compatible workflow with simpler installation, diagnostics, and flexible point-source extraction._
+
+_Python 3 package for reducing HST grism observations:_
+
+- _Modular, aXe-compatible workflow with simplified installation and diagnostic outputs._
 - _Optimized for flexible point-source extraction and 2D polynomial background modeling._
 - _Powering data reduction pipelines in peer-reviewed observational studies, including [Bhirombhakdi et al. (2024)](https://ui.adsabs.harvard.edu/abs/2024ApJ...977..256B/abstract)._
 
-| ![](../ims/hstgrism-1.png) | ![](../ims/hstgrism-2.webp) |
-| -------------------------- | --------------------------- |
+
+![hstgrism screenshot 1](../ims/hstgrism-1.png){ width="100%" }
+![hstgrism screenshot 2](../ims/hstgrism-2.webp){ width="100%" }
 
 
-[EchoEcho](https://github.com/OhioUniversityGameDevelopersAssociation/EchoEcho)
+**[EchoEcho](https://github.com/OhioUniversityGameDevelopersAssociation/EchoEcho)**
+
 _help Fernando the Bat echolocate the way out and survive attacks from mad stone gargoyles. a prototype from Global Game Jam 2017, together with the Ohio University Game Developers Association (OUGDA), exploring wave and darkness._
 
-| ![](../ims/echoecho-1.webp) | ![](../ims/echoecho-2.webp) | ![](../ims/echoecho-3.webp) |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+
+![EchoEcho screenshot 1](../ims/echoecho-1.webp){ width="100%" }
+![EchoEcho screenshot 2](../ims/echoecho-2.webp){ width="100%" }
+![EchoEcho screenshot 3](../ims/echoecho-3.webp){ width="100%" }
+
 
 ---
 
 ## Audio Zines
 
 **ZADDY breadcrumbs 2026 collection**
+
 _Explore 24 key milestones tracking our journey from initial vibe-checks to full spellbook publications. Dive into AI literacy, red-teaming, jailbreak frameworks, and agent security—start with the breadcrumb map, then tap any record to explore the depth!_
+
 [Zenodo:21791515](https://doi.org/10.5281/zenodo.21791515) [Page](https://bkornpob.github.io/zaddy-breadcrumbs-2026-collection/) [Spotify](https://open.spotify.com/show/0341BtZBc8Q7SYFyAYBzny?si=531f32a5c67d4c5e) [Youtube](https://www.youtube.com/playlist?list=PLe5amOUM6pU4)
 
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/0341BtZBc8Q7SYFyAYBzny?utm_source=generator&si=7da3a079d9dc496e" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **spellbook of jailbreak and agent vulnerabilities**
+
 _Deconstructs agent jailbreak as iterative search across AI agent ecosystems. Unifies attack vectors via the Jailbreak Perturbation Framework (JPF), analyzes real-world ChatGPT Operator exploits, introduces Distributed Diffusion of Jailbreak (DDoJ), and presents the D3 Agent Defense Triad (Detect, Delay, Disguise) for continuous lifecycle security._
+
 [Zenodo:21665118](https://doi.org/10.5281/zenodo.21665118) [Page](https://bkornpob.github.io/spellbook-of-jailbreak-and-agent-vulnerabilities/) [Spotify](https://open.spotify.com/show/033XXOu3WvDSc484jv24Hx?si=d4cfbfa9d41c4d2c) [Youtube](https://www.youtube.com/playlist?list=PLHoOQkUH707g)
 
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/033XXOu3WvDSc484jv24Hx?utm_source=generator&si=b738fb543b0c459e" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **spellbook of task avoidance wards**
+
 _Exposes task avoidance as a hidden failure mode in agentic systems. Deconstructs evasion mechanics such as proposal hallucination and cost asymmetry exploitation, while introducing defensive wards—from strict validation gates to anti-loop protocols—to ensure reliable, accountable execution._
+
 [Zenodo:20821697](https://doi.org/10.5281/zenodo.20821697) [Page](https://bkornpob.github.io/spellbook-of-task-avoidance-wards/) [Spotify](https://open.spotify.com/show/033DR4fqcaTEGexxQzejCn?si=2ef9ef8adb644e57) [Youtube](https://www.youtube.com/playlist?list=PLhvoGVRKQCAiFyRLw2k70aOsDKLM43Qzz)
 
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3VHl3hpOvOl7kU8oryvT7z?utm_source=generator&si=bbec98c26f7c4533" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -54,9 +75,16 @@ _Exposes task avoidance as a hidden failure mode in agentic systems. Deconstruct
 
 ## Online Hubs
 
-|    ![400](../ims/logo_multiverselib-collectives.png)     |          ![\|151x189](../ims/substack-bpj.jpeg)          |     ![[../ims/04-research-1786070104143.webp]]     |
-| :------------------------------------------------------: | :------------------------------------------------------: | :------------------------------------------------: |
-| [multiverselib-collectives](https://bkornpob.github.io/) | [substack.com/@bkornpob](https://substack.com/@bkornpob) | [old-dr-kb-hub](https://kbhirombhakdi.weebly.com/) |
+
+![multiverselib-collectives](../ims/logo_multiverselib-collectives.png){ width="100%" }
+![substack](../ims/substack-bpj.jpeg){ width="100%" }
+![old drkb hub](../ims/04-research-1786070104143.webp){ width="100%" }
+
+| Hub | Link |
+| --- | --- |
+| multiverselib-collectives | [bkornpob.github.io](https://bkornpob.github.io) |
+| substack | [substack.com/@bkornpob](https://substack.com/@bkornpob) |
+| old-dr-kb-hub | [kbhirombhakdi.weebly.com](https://kbhirombhakdi.weebly.com/) |
 
 ---
 

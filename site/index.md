@@ -15,8 +15,6 @@ description: "Senior polymath researcher, educator, and consultant"
 - 🌐 [bkornpob.github.io](https://bkornpob.github.io)
 - 🔗 [ORCID: 0000-0003-0136-1281](https://orcid.org/0000-0003-0136-1281)
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/4ik1R8y6s2FvngD1C7x9EV/video?utm_source=generator&si=541efa620b9a4807" width="624" height="351" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
 ---
 
 ## Sections
