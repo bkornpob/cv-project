@@ -54,14 +54,14 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
 <title>${current.title} — dr. kornpob bhirombhakdi</title>
 <style>
   :root {
-    --bg: #0b0c10;
-    --surface: #111318;
-    --text: #e6e6e6;
-    --muted: #9aa3af;
-    --accent: #c9a227;
-    --border: #1f232b;
-    --link: #7fb3ff;
-    --link-visited: #b4a7d6;
+    --bg: #06040c;
+    --surface: #0c0918;
+    --text: #f3e8ff;
+    --muted: #6b5f8a;
+    --accent: #ff47d1;
+    --border: #1a1428;
+    --link: #c4b5fd;
+    --link-visited: #a78bfa;
     --max: 920px;
     --pad: 28px;
   }
@@ -78,9 +78,14 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
   a:hover { text-decoration: underline; }
   header {
     border-bottom: 1px solid var(--border);
-    padding: 24px var(--pad);
+    padding: 20px var(--pad);
     max-width: var(--max);
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
   }
   .brand {
     font-size: 20px;
@@ -88,9 +93,38 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     letter-spacing: 0.2px;
   }
   .meta {
-    margin-top: 6px;
+    margin-top: 4px;
     font-size: 13px;
     color: var(--muted);
+  }
+  .theme-switch {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .theme-switch .theme-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .theme-switch button {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 4px 8px;
+    font-family: inherit;
+    font-size: 10px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all .12s;
+  }
+  .theme-switch button:hover { border-color: var(--accent); color: var(--text); }
+  .theme-switch button.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 8px rgba(255,71,209,.18);
   }
   nav {
     max-width: var(--max);
@@ -185,12 +219,59 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     color: var(--muted);
     border-top: 1px solid var(--border);
   }
+
+  /* ---------- VIBE THEMES ---------- */
+  .vibe-zaddy {
+    --bg: #1a0f05;
+    --surface: #2a1a0a;
+    --accent: #ff8c00;
+    --border: #3d2a0a;
+    --link: #ffc87c;
+    --link-visited: #ffb347;
+    --muted: #b37a2a;
+  }
+  .vibe-gdk {
+    --bg: #050a14;
+    --surface: #0a1428;
+    --accent: #4a90d9;
+    --border: #1a3a5c;
+    --link: #6fb8ff;
+    --link-visited: #a0c4ff;
+    --muted: #5a7a9a;
+  }
+  .vibe-dab {
+    --bg: #020d08;
+    --surface: #071c10;
+    --accent: #39ff91;
+    --border: #14663d;
+    --link: #3cff9a;
+    --link-visited: #9df5b7;
+    --muted: #4a8a5e;
+  }
+  .vibe-equinox {
+    --bg: #06040c;
+    --surface: #0c0918;
+    --accent: #ff47d1;
+    --border: #1a1428;
+    --link: #c4b5fd;
+    --link-visited: #a78bfa;
+    --muted: #6b5f8a;
+  }
 </style>
 </head>
 <body>
   <header>
-    <div class="brand">dr. kornpob bhirombhakdi</div>
-    <div class="meta">${isHome ? 'AI Security Researcher, Educator, and Consultant · bkornpob@gmail.com · ORCID 0000-0003-0136-1281' : 'bkornpob@gmail.com · <a href="https://bkornpob.github.io">bkornpob.github.io</a> · ORCID 0000-0003-0136-1281'}</div>
+    <div>
+      <div class="brand">dr. kornpob bhirombhakdi</div>
+      <div class="meta">${isHome ? 'AI Security Researcher, Educator, and Consultant · bkornpob@gmail.com · ORCID 0000-0003-0136-1281' : 'bkornpob@gmail.com · <a href="https://bkornpob.github.io">bkornpob.github.io</a> · ORCID 0000-0003-0136-1281'}</div>
+    </div>
+    <div class="theme-switch">
+      <span class="theme-label">vibe</span>
+      <button data-vibe="vibe-zaddy">zaddy</button>
+      <button data-vibe="vibe-gdk">gdk</button>
+      <button data-vibe="vibe-dab">dab</button>
+      <button data-vibe="vibe-equinox">equinox</button>
+    </div>
   </header>
   <nav>
     <ul class="nav">
@@ -202,8 +283,23 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     ${content}
   </main>
   <footer>
-    multiverselib-collectives · built from markdown sources · <a href="index.html">home</a>
+    <span id="themeStatus"></span>
+    <br>
+    multiverselib-collectives · built from markdown sources · <a href="landing-page.html">home</a>
   </footer>
+  <script>
+    const THEMES = ['vibe-zaddy','vibe-gdk','vibe-dab','vibe-equinox'];
+    const saved = localStorage.getItem('mlc-vibe');
+    if (saved && THEMES.includes(saved)) document.body.classList.add(saved);
+    else { document.body.classList.add('vibe-equinox'); }
+    document.querySelectorAll('.theme-switch button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.body.classList.remove(...THEMES);
+        document.body.classList.add(btn.dataset.vibe);
+        localStorage.setItem('mlc-vibe', btn.dataset.vibe);
+      });
+    });
+  </script>
 </body>
 </html>`;
 
