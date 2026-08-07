@@ -7,6 +7,11 @@ const outDir = path.resolve('/home/equinox/multiverselib-collectives/cv-project/
 
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
+// Clean stale section outputs so merged/removed pages don't linger
+for (const f of fs.readdirSync(outDir)) {
+  if (f.endsWith('.html')) fs.unlinkSync(path.join(outDir, f));
+}
+
 // Copy images from ims/ into docs/assets/
 const assetsDir = path.join(outDir, 'assets');
 if (!fs.existsSync(assetsDir)) fs.mkdirSync(assetsDir, { recursive: true });
@@ -19,7 +24,6 @@ if (fs.existsSync(imsDir)) {
 
 const files = [
   '01-education.md',
-  '02-certifications.md',
   '03-employment.md',
   '04-research.md',
   '05-achievements.md',
@@ -349,7 +353,10 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
   <footer>
     <span id="themeStatus"></span>
     <br>
-    multiverselib-collectives · built from markdown sources · <a href="landing-page.html">home</a>
+    <a href="https://bkornpob.github.io" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:inherit">
+      <img src="assets/Logo_multiverselib-collectives.png" alt="multiverselib-collectives" class="theme-logo">
+      <span>multiverselib-collectives</span>
+    </a>
   </footer>
   <script>
     const THEMES = ['vibe-zaddy','vibe-gdk','vibe-dab','vibe-equinox'];
