@@ -223,9 +223,55 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     font-size: 12px;
     border: 1px solid var(--border);
   }
+
+  .layout {
+    display: flex;
+    min-height: calc(100vh - 0px);
+  }
+  .sidebar {
+    width: 220px;
+    border-right: 1px solid var(--border);
+    padding: 22px var(--pad);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .sidebar .brand {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: var(--text);
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar li {
+    margin: 6px 0;
+  }
+  .sidebar a {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    padding: 6px 8px;
+    border-left: 2px solid transparent;
+    text-decoration: none;
+  }
+  .sidebar a:hover {
+    color: var(--text);
+    border-left-color: var(--accent);
+    text-decoration: none;
+  }
+  .content-area {
+    flex: 1;
+    padding: 22px var(--pad) 64px;
+    max-width: 100%;
+  }
   footer {
-    max-width: var(--max);
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     padding: 14px var(--pad) 36px;
     font-size: 12px;
     color: var(--muted);
@@ -278,23 +324,28 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
       <div class="meta">${isHome ? 'AI Security Researcher, Educator, and Consultant · bkornpob@gmail.com · ORCID 0000-0003-0136-1281' : 'bkornpob@gmail.com · <a href="https://bkornpob.github.io">bkornpob.github.io</a> · ORCID 0000-0003-0136-1281'}</div>
     </div>
     <div class="theme-switch">
-      <img src="assets/Logo_multiverselib-collectives.png" alt="multiverselib-collectives" class="theme-logo">
-      <span class="theme-label">multiverselib-collectives</span>
+      <a href="https://bkornpob.github.io" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:inherit">
+        <img src="assets/Logo_multiverselib-collectives.png" alt="multiverselib-collectives" class="theme-logo">
+        <span class="theme-label">multiverselib-collectives</span>
+      </a>
       <button data-vibe="vibe-zaddy">zaddy</button>
       <button data-vibe="vibe-gdk">gdk</button>
       <button data-vibe="vibe-dab">dab</button>
       <button data-vibe="vibe-equinox">equinox</button>
     </div>
   </header>
-  <nav>
-    <ul class="nav">
-      <li><a href="landing-page.html">Home</a></li>
-      ${nav}
-    </ul>
-  </nav>
-  <main>
-    ${content}
-  </main>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">dr. kornpob bhirombhakdi</div>
+      <ul>
+        <li><a href="landing-page.html">page 0 — Home</a></li>
+        ${nav}
+      </ul>
+    </aside>
+    <div class="content-area">
+      ${content}
+    </div>
+  </div>
   <footer>
     <span id="themeStatus"></span>
     <br>

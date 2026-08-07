@@ -12,13 +12,4 @@
 
 ---
 
-## Sections
-
-- [Education](01-education.md)
-- [Certifications & Training](02-certifications.md)
-- [Employment](03-employment.md)
-- [Research & Publications](04-research.md)
-- [Achievements](05-achievements.md)
-- [Skills](06-skills.md)
-
-> This CV is built from Markdown sources. Download the full [PDF](https://bkornpob.github.io/files/cv.pdf) for print-ready formatting.
+## Quick Links
