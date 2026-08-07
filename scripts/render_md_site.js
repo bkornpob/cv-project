@@ -44,7 +44,7 @@ const sections = files.map((f) => {
 const homeRaw = fs.readFileSync(path.join(root, 'index.md'), 'utf8');
 const homeHtml = marked.parse(homeRaw, { gfm: true });
 
-const nav = sections.map((s, i) => `<li><a href="${s.file}">${i + 1}. ${s.title}</a></li>`).join('\n      ');
+const nav = sections.map((s, i) => `<li><a href="${s.file}">page-${i + 1} ${s.title}</a></li>`).join('\n      ');
 
 const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
 <html lang="en">
@@ -338,7 +338,7 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     <aside class="sidebar">
       <div class="brand">dr. kornpob bhirombhakdi</div>
       <ul>
-        <li><a href="landing-page.html">page 0 — Home</a></li>
+        <li><a href="landing-page.html">page-0 Home</a></li>
         ${nav}
       </ul>
     </aside>
