@@ -358,7 +358,7 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
   <header>
     <div>
       <div class="brand">dr. kornpob bhirombhakdi</div>
-      <div class="meta">${isHome ? 'AI Security Researcher, Educator, and Consultant · bkornpob@gmail.com · ORCID 0000-0003-0136-1281' : 'bkornpob@gmail.com · <a href="https://bkornpob.github.io">bkornpob.github.io</a> · ORCID 0000-0003-0136-1281'}</div>
+      <div class="meta">AI Security Researcher, Educator, and Consultant · bkornpob@gmail.com · ORCID 0000-0003-0136-1281 · <a href="https://bkornpob.github.io">bkornpob.github.io</a></div>
     </div>
     <div class="theme-switch">
       <a href="https://bkornpob.github.io" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:inherit">
