@@ -21,15 +21,6 @@
 </div>
 
 <div>
-## Operating Mode
-
-- **AuDHD**: hyperfocus + systems thinking + pattern recognition
-- **RSD**: rejection-sensitive; feedback is fuel
-- **style**: direct, no-fluff, content-first
-- **motto**: truth, love, liberation
-</div>
-
-<div>
 ## recent bits
 
 Spellbook of Jailbreak and Agent Vulnerabilities ([Zenodo:21665118](https://doi.org/10.5281/zenodo.21665118) + [Page](https://bkornpob.github.io/spellbook-of-jailbreak-and-agent-vulnerabilities/) + [Spotify](https://open.spotify.com/show/033XXOu3WvDSc484jv24Hx?si=d4cfbfa9d41c4d2c) + [Youtube](https://www.youtube.com/playlist?list=PLHoOQkUH707g)
