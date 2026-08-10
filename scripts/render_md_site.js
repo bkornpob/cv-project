@@ -355,6 +355,7 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     font-size: 12px;
     color: var(--muted);
     border-top: 1px solid var(--border);
+    text-align: right;
   }
 
   /* ---------- VIBE THEMES ---------- */
@@ -480,7 +481,8 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
       'type': 'floating-chat',
       'floating-chat.donateButton.text': 'Tip Us',
       'floating-chat.donateButton.background-color': '#f45d22',
-      'floating-chat.donateButton.text-color': '#fff'
+      'floating-chat.donateButton.text-color': '#fff',
+      'floating-chat.position': 'right'
     });
   </script>
 </body>
