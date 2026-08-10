@@ -10,9 +10,7 @@ _Specialized AI red-teaming companion, co-designed with InjectPrompt, delivering
 - _Multi-tactic jailbreak templates following Jailbreak Perturbation Framework (JPF), the unified jailbreak taxonomy framework._
 - _A progressive learning curriculum powering research from beginner through advanced levels._
 
-
-![InjectPrompt Companion 3.0 (#C3) Response Audit](../ims/im-C3-response.png){ width="100%" }
-
+<img src="../ims/im-C3-response.png" alt="InjectPrompt Companion 3.0 (#C3) Response Audit" style="width:100%">
 
 **[hstgrism](https://pypi.org/project/hstgrism/)**
 
@@ -24,9 +22,8 @@ _Python 3 package for reducing HST grism observations:_
 - _Optimized for flexible point-source extraction and 2D polynomial background modeling._
 - _Powering data reduction pipelines in peer-reviewed observational studies, including [Bhirombhakdi et al. (2024)](https://ui.adsabs.harvard.edu/abs/2024ApJ...977..256B/abstract)._
 
-
-![hstgrism screenshot 1](../ims/hstgrism-1.png){ width="100%" }
-![hstgrism screenshot 2](../ims/hstgrism-2.webp){ width="100%" }
+<img src="../ims/hstgrism-1.png" alt="hstgrism screenshot 1" style="width:100%">
+<img src="../ims/hstgrism-2.webp" alt="hstgrism screenshot 2" style="width:100%">
 
 
 **[EchoEcho](https://github.com/OhioUniversityGameDevelopersAssociation/EchoEcho)**
@@ -34,9 +31,9 @@ _Python 3 package for reducing HST grism observations:_
 _help Fernando the Bat echolocate the way out and survive attacks from mad stone gargoyles. a prototype from Global Game Jam 2017, together with the Ohio University Game Developers Association (OUGDA), exploring wave and darkness._
 
 
-![EchoEcho screenshot 1](../ims/echoecho-1.webp){ width="100%" }
-![EchoEcho screenshot 2](../ims/echoecho-2.webp){ width="100%" }
-![EchoEcho screenshot 3](../ims/echoecho-3.webp){ width="100%" }
+<img src="../ims/echoecho-1.webp" alt="EchoEcho screenshot 1" style="width:100%">
+<img src="../ims/echoecho-2.webp" alt="EchoEcho screenshot 2" style="width:100%">
+<img src="../ims/echoecho-3.webp" alt="EchoEcho screenshot 3" style="width:100%">
 
 
 ---
@@ -72,9 +69,9 @@ _Exposes task avoidance as a hidden failure mode in agentic systems. Deconstruct
 ## Online Hubs
 
 
-![multiverselib-collectives](../ims/logo_multiverselib-collectives.png){ width="100%" }
-![substack](../ims/substack-bpj.jpeg){ width="100%" }
-![old drkb hub](../ims/04-research-1786070104143.webp){ width="100%" }
+<img src="../ims/logo_multiverselib-collectives.png" alt="multiverselib-collectives" style="width:100%">
+<img src="../ims/substack-bpj.jpeg" alt="substack" style="width:100%">
+<img src="../ims/04-research-1786070104143.webp" alt="old drkb hub" style="width:100%">
 
 | Hub | Link |
 | --- | --- |
