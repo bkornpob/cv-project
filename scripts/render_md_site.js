@@ -27,7 +27,7 @@ const files = [
   '03-employment.md',
   '04-research.md',
   '05-achievements.md',
-  '06-skills.md',
+  'services.md',
 ];
 
 const stripFrontMatter = (text) => {
