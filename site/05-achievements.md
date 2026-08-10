@@ -19,10 +19,16 @@ title: "Achievements"
 
 HST 14 proposals, JWST 6 proposals
 
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+    <img src="../ims/05-achievements-1786071466311.webp" alt="hst-proposals" style="width: 70%; height: auto;">
+    <img src="../ims/05-achievements-1786071550723.webp" alt="jwst-proposals" style="width: 70%; height: auto;">
+</div>
 
-![Achievements image 1](../ims/05-achievements-1786071466311.webp){ width="100%" }
-![Achievements image 2](../ims/05-achievements-1786071550723.webp){ width="100%" }
+## ENGRAVE - Electromagnetic counterparts of gravitational wave sources at the Very Large Telescope
 
+_ENGRAVE is a international collaboration bringing together astronomers who use the ESO facilities to research gravitational wave events. It collects over 250 researchers, with both theoretical and observational expertise._ [Link](https://www.engrave-eso.org/)
+
+<img src="../ims/engrave logo.png" alt="engrave-logo" style="width: 30%; height: auto;">
 
 ## Bravo! Awards
 
@@ -31,10 +37,10 @@ issued by the Space Telescope Science Institute (AURA/NASA)
 - Hosting the Loyola University Physics Club on February 20, 2020
 - Contributing in Astrogrism Sprint during May 12--21, 2020
 
-
-![bravo-loyola](../ims/bravo-loyola.jpg){ width="100%" }
-![bravo-astrogrism](../ims/bravo-astrogrism.jpg){ width="100%" }
-
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+    <img src="../ims/bravo-loyola.jpg" alt="bravo-loyola" style="width: 70%; height: auto;">
+    <img src="../ims/bravo-astrogrism.jpg" alt="bravo-astrogrism" style="width: 70%; height: auto;">
+</div>
 
 ## Graduate Awards
 
