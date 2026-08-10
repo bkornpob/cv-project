@@ -1,21 +1,11 @@
 # Build artifacts
-site/.rendered/
 docs/
-pdf/
-
-# Dependencies
 node_modules/
-
-# Python
-scripts/__pycache__/
-*.pyc
 .venv/
-
-# OS
+__pycache__/
+*.pyc
 .DS_Store
 Thumbs.db
-
-# Editor
 .idea/
 .vscode/
 *.swp
