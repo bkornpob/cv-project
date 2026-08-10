@@ -231,34 +231,43 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
   /* ---------- CONTENT STYLING ---------- */
   .content-area .node {
     margin: 18px 0;
-    padding: 14px 16px;
+    padding: 18px 20px;
     border: 1px solid var(--border);
     background: var(--surface);
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: transform .15s, box-shadow .15s, border-color .15s;
+  }
+  .content-area .node:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    border-color: var(--accent);
   }
   .content-area .heading {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 700;
     color: var(--text);
-    margin: 0 0 10px;
+    margin: 0 0 12px;
+    letter-spacing: 0.2px;
   }
   .content-area .meta {
     font-size: 13px;
     color: var(--muted);
-    margin: 0 0 8px;
+    margin: 0 0 10px;
+    font-style: italic;
   }
   .content-area .bullets {
-    padding-left: 18px;
+    padding-left: 20px;
     margin: 0;
   }
   .content-area .bullets li {
-    margin: 5px 0;
+    margin: 6px 0;
+    line-height: 1.6;
   }
   .content-area .vibe {
     font-size: 13px;
     color: var(--accent);
     opacity: .9;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
   .layout {
@@ -406,43 +415,29 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
 
     const contentArea = document.querySelector('.content-area');
     if (contentArea) {
-      const frag = document.createDocumentFragment();
-      contentArea.childNodes.forEach((node) => {
-        if (node.nodeType === Node.ELEMENT_NODE) {
-          const tag = node.tagName.toLowerCase();
+      const headings = Array.from(contentArea.querySelectorAll('h1, h2, h3'));
+      if (headings.length > 0) {
+        const frag = document.createDocumentFragment();
+        headings.forEach((heading, idx) => {
           const wrap = document.createElement('div');
           wrap.className = 'node';
+          const headingDiv = document.createElement('div');
+          headingDiv.className = 'heading';
+          headingDiv.innerHTML = heading.outerHTML;
+          wrap.appendChild(headingDiv);
 
-          if (/^h[1-3]$/.test(tag)) {
-            const h = document.createElement('div');
-            h.className = 'heading';
-            h.innerHTML = node.outerHTML;
-            wrap.appendChild(h);
-          } else if (tag === 'ul' || tag === 'ol') {
-            node.classList.add('bullets');
-            wrap.appendChild(node);
-          } else if (tag === 'p') {
-            const text = node.textContent.trim();
-            if (text.startsWith('**') || text.startsWith('*') || text.includes('Professor') || text.includes('University') || text.includes('GPA')) {
-              const meta = document.createElement('div');
-              meta.className = 'meta';
-              meta.innerHTML = node.outerHTML;
-              wrap.appendChild(meta);
-            } else {
-              wrap.appendChild(node);
-            }
-          } else if (tag === 'blockquote' || tag === 'hr') {
-            node.classList.add('vibe');
-            wrap.appendChild(node);
-          } else {
-            wrap.appendChild(node);
+          const next = headings[idx + 1];
+          let sibling = heading.nextElementSibling;
+          while (sibling && sibling !== next) {
+            const clone = sibling.cloneNode(true);
+            wrap.appendChild(clone);
+            sibling = sibling.nextElementSibling;
           }
-
           frag.appendChild(wrap);
-        }
-      });
-      contentArea.innerHTML = '';
-      contentArea.appendChild(frag);
+        });
+        contentArea.innerHTML = '';
+        contentArea.appendChild(frag);
+      }
     }
   </script>
 </body>
