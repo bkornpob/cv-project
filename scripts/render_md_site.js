@@ -229,8 +229,16 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
   }
 
   /* ---------- CONTENT STYLING ---------- */
+  .content-area {
+    display: block;
+  }
+  .content-area:has(.node):has(.node:nth-child(2):last-child) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
   .content-area .node {
-    margin: 18px 0;
+    margin: 0;
     padding: 18px 20px;
     border: 1px solid var(--border);
     background: var(--surface);
