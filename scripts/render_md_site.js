@@ -237,6 +237,9 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     display: block;
   }
   .content-area:has(.node):has(.node:nth-child(2):last-child) {
+    display: block;
+  }
+  body.page-education .content-area:has(.node):has(.node:nth-child(2):last-child) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
@@ -393,7 +396,7 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
   }
 </style>
 </head>
-<body>
+<body class="${isHome ? 'page-home' : (current.file === '01-education.html' ? 'page-education' : '')}">
   <header>
     <div>
       <div class="brand">dr. kornpob bhirombhakdi</div>
