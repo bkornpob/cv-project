@@ -21,9 +21,16 @@
 </div>
 
 <div>
+## Operating Mode
+
+- **AuDHD**: hyperfocus + systems thinking + pattern recognition
+- **RSD**: rejection-sensitive; feedback is fuel
+- **style**: direct, no-fluff, content-first
+- **motto**: truth, love, liberation
+
 ## Skills
 
-???help me improve ai-search tags???
+#AI-Safety, #Red-Teaming, #Prompt-Security, #Jailbreak-Research, #Agent-Security, #LLM-Agents, #Machine-Learning, #Deep-Learning, #Python, #Data-Science, #Astrophysics, #Supernovae, #JWST, #HST, #Econometrics, #Game-Theory, #RAG, #Computer-Vision, #Kubernetes, #AWS
 </div>
 
 Spellbook of Jailbreak and Agent Vulnerabilities <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://www.youtube.com/embed/yWlcNBe8aBE?si=WULuq3E0qeHHUlkG" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> more on ... [Zenodo:21665118](https://doi.org/10.5281/zenodo.21665118) + [Page](https://bkornpob.github.io/spellbook-of-jailbreak-and-agent-vulnerabilities/) + [Spotify](https://open.spotify.com/show/033XXOu3WvDSc484jv24Hx?si=d4cfbfa9d41c4d2c) + [Youtube](https://www.youtube.com/playlist?list=PLHoOQkUH707g)
@@ -31,12 +38,3 @@ Spellbook of Jailbreak and Agent Vulnerabilities <iframe data-testid="embed-ifra
 The Judgement Day 2026 Phase-1 Scenario Submission <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://www.youtube.com/embed/VBX1oyZoRTg?si=8QLiV_YUY4rWYDrT" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> more on ... [GitHub](https://github.com/bkornpob/THEJUDGEMENTDAY_PHASE1_REFLECTION) + [Spotify](https://open.spotify.com/show/0340zu7KTOlOcVBdv95hrt?si=012c443645544276) + [Youtube](https://youtube.com/playlist?list=PLAe0qVVdVUQQ&si=PPnM-US8p5DIUREq)
 
 Goodboy Recon <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/24XtYZFcMhhEaxVvx9E8GB?utm_source=generator&si=ffcd6b1fa04d4110" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> more on ... [Github](https://github.com/bkornpob/RT101-AI-Security-and-Red-Teaming/blob/main/published-articles/be-good-boy/goodboyd-recon-technical.md) + [Medium](https://dr-kb.medium.com/be-good-boy-62c485bb3a70)
-
-<div>
-## Operating Mode
-
-- **AuDHD**: hyperfocus + systems thinking + pattern recognition
-- **RSD**: rejection-sensitive; feedback is fuel
-- **style**: direct, no-fluff, content-first
-- **motto**: truth, love, liberation
-</div>
