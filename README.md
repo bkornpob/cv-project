@@ -4,16 +4,24 @@ Multi-page CV / personal site with custom Node.js renderer.
 
 **Source of truth:** `site/*.md` → `docs/` via `node scripts/render_md_site.js`
 
+**PDF source:** `pdf/cv.md` → `pdf/cv.pdf` via Pandoc + XeLaTeX
+
 ## Setup
 
 ```bash
 npm install
 ```
 
-## Build
+## Build Site
 
 ```bash
 node scripts/render_md_site.js
+```
+
+## Build PDF
+
+```bash
+pandoc pdf/cv.md -o pdf/cv.pdf --pdf-engine=xelatex -V geometry:margin=1.5cm -V mainfont="DejaVu Serif" -V sansfont="DejaVu Sans" -V fontsize=10pt -V linestretch=1.15
 ```
 
 ## Serve
