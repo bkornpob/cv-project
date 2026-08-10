@@ -10,7 +10,7 @@ _Specialized AI red-teaming companion, co-designed with InjectPrompt, delivering
 - _Multi-tactic jailbreak templates following Jailbreak Perturbation Framework (JPF), the unified jailbreak taxonomy framework._
 - _A progressive learning curriculum powering research from beginner through advanced levels._
 
-<img src="../ims/im-C3-response.png" alt="InjectPrompt Companion 3.0 (#C3) Response Audit" style="width:100%">
+<img src="../ims/im-C3-response.png" alt="InjectPrompt Companion 3.0 (#C3) Response Audit" style="width:40%">
 
 **[hstgrism](https://pypi.org/project/hstgrism/)**
 
@@ -22,23 +22,24 @@ _Python 3 package for reducing HST grism observations:_
 - _Optimized for flexible point-source extraction and 2D polynomial background modeling._
 - _Powering data reduction pipelines in peer-reviewed observational studies, including [Bhirombhakdi et al. (2024)](https://ui.adsabs.harvard.edu/abs/2024ApJ...977..256B/abstract)._
 
-<img src="../ims/hstgrism-1.png" alt="hstgrism screenshot 1" style="width:100%">
-<img src="../ims/hstgrism-2.webp" alt="hstgrism screenshot 2" style="width:100%">
-
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+    <img src="../ims/hstgrism-1.png" alt="hstgrism screenshot 1" style="width: 100%; height: auto;">
+    <img src="../ims/hstgrism-2.webp" alt="hstgrism screenshot 2" style="width: 100%; height: auto;">
+</div>
 
 **[EchoEcho](https://github.com/OhioUniversityGameDevelopersAssociation/EchoEcho)**
 
 _help Fernando the Bat echolocate the way out and survive attacks from mad stone gargoyles. a prototype from Global Game Jam 2017, together with the Ohio University Game Developers Association (OUGDA), exploring wave and darkness._
 
-
-<img src="../ims/echoecho-1.webp" alt="EchoEcho screenshot 1" style="width:100%">
-<img src="../ims/echoecho-2.webp" alt="EchoEcho screenshot 2" style="width:100%">
-<img src="../ims/echoecho-3.webp" alt="EchoEcho screenshot 3" style="width:100%">
-
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; width: 100%;">
+    <img src="../ims/echoecho-1.webp" alt="EchoEcho screenshot 1" style="width: 100%; height: auto;">
+    <img src="../ims/echoecho-2.webp" alt="EchoEcho screenshot 2" style="width: 100%; height: auto;">
+    <img src="../ims/echoecho-3.webp" alt="EchoEcho screenshot 3" style="width: 100%; height: auto;">
+</div>
 
 ---
 
-## Audio Zines
+## Zines & Audios
 
 **ZADDY breadcrumbs 2026 collection**
 
@@ -68,16 +69,21 @@ _Exposes task avoidance as a hidden failure mode in agentic systems. Deconstruct
 
 ## Online Hubs
 
-
-<img src="../ims/logo_multiverselib-collectives.png" alt="multiverselib-collectives" style="width:100%">
-<img src="../ims/substack-bpj.jpeg" alt="substack" style="width:100%">
-<img src="../ims/04-research-1786070104143.webp" alt="old drkb hub" style="width:100%">
-
 | Hub | Link |
 | --- | --- |
+| linkedin | [linkedin.com/in/bkornpob](https://www.linkedin.com/in/bkornpob/) |
 | multiverselib-collectives | [bkornpob.github.io](https://bkornpob.github.io) |
-| substack | [substack.com/@bkornpob](https://substack.com/@bkornpob) |
 | old-dr-kb-hub | [kbhirombhakdi.weebly.com](https://kbhirombhakdi.weebly.com/) |
+| substack | [substack.com/@bkornpob](https://substack.com/@bkornpob) |
+| medium | [dr-kb.medium.com](https://dr-kb.medium.com/) |
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; width: 100%;">
+    <img src="../ims/Logo_multiverselib-collectives.png" alt="multiverselib-collectives bkornpob.github.io" style="width: 100%; height: auto;">
+    <img src="../ims/04-research-1786070104143.webp" alt="kbhirombhakdi.weebly.com" style="width: 100%; height: auto;">
+    <img src="../ims/substack-bpj.jpeg" alt="substack" style="width: 100%; height: auto;">
+    <img src="../ims/image-drkb-medium.webp
+" alt="medium" style="width: 100%; height: auto;">    
+</div>
 
 ---
 
