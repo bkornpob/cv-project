@@ -419,7 +419,7 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
       <ul>
         <li><a href="landing-page.html">page-0 Home</a></li>
         ${nav}
-        <li><a href="https://github.com/bkornpob/cv-project/pdf/cv.pdf">pdf</a></li>
+        <li><a href="https://zenodo.org/records/21875037/files/cv.pdf?download=1">pdf</a></li>
       </ul>
     </aside>
     <div class="content-area">
