@@ -40,7 +40,11 @@ const stripFrontMatter = (text) => {
 
 const sections = files.map((f) => {
   const raw = stripFrontMatter(fs.readFileSync(path.join(root, f), 'utf8'));
-  const html = marked.parse(raw, { gfm: true }).replace(/\.\.\/ims\//g, 'assets/');
+  let html = marked.parse(raw, { gfm: true }).replace(/\.\.\/ims\//g, 'assets/');
+  html = html.replace(
+    /(<h2>Publications<\/h2>)([\s\S]*?)(?=<h2>|<\/section>|$)/,
+    (_, start, body) => start + body.replace(/(<p>.*?<\/p>\s*)/gs, '<div class="pub-card">$1</div>')
+  );
   const title = html.match(/<h1[^>]*>(.*?)<\/h1>/)?.[1] || f;
   return { file: f.replace(/\.md$/, '.html'), title, html };
 });
@@ -256,6 +260,24 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
     color: var(--text);
     margin: 0 0 12px;
     letter-spacing: 0.2px;
+  }
+  .content-area .pub-card {
+    position: relative;
+    padding: 14px 16px 14px 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    margin: 10px 0;
+  }
+  .content-area .pub-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: var(--accent);
   }
   .content-area .meta {
     font-size: 13px;
