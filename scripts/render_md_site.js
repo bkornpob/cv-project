@@ -40,7 +40,7 @@ const stripFrontMatter = (text) => {
 
 const sections = files.map((f) => {
   const raw = stripFrontMatter(fs.readFileSync(path.join(root, f), 'utf8'));
-  const html = marked.parse(raw, { gfm: true });
+  const html = marked.parse(raw, { gfm: true }).replace(/\.\.\/ims\//g, 'assets/');
   const title = html.match(/<h1[^>]*>(.*?)<\/h1>/)?.[1] || f;
   return { file: f.replace(/\.md$/, '.html'), title, html };
 });
@@ -423,7 +423,7 @@ const pageTemplate = (content, current, isHome) => `<!DOCTYPE html>
 
     const contentArea = document.querySelector('.content-area');
     if (contentArea) {
-      const headings = Array.from(contentArea.querySelectorAll('h1, h2, h3'));
+      const headings = Array.from(contentArea.querySelectorAll('h1, h2'));
       if (headings.length > 0) {
         const frag = document.createDocumentFragment();
         headings.forEach((heading, idx) => {
