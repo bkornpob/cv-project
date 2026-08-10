@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Achievements — dr. kornpob bhirombhakdi</title>
+<style>
+  :root {
+    --bg: #06040c;
+    --surface: #0c0918;
+    --text: #f3e8ff;
+    --muted: #6b5f8a;
+    --accent: #ff47d1;
+    --border: #1a1428;
+    --link: #c4b5fd;
+    --link-visited: #a78bfa;
+    --max: 920px;
+    --pad: 28px;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--text); }
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-weight: 400;
+    line-height: 1.55;
+    margin: 0;
+    padding: 0;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px var(--pad);
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand img, .theme-logo {
+    height: 50px;
+    width: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    display: inline-block;
+  }
+  .meta {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .theme-switch {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .theme-switch .theme-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .theme-switch button {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 4px 8px;
+    font-family: inherit;
+    font-size: 10px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all .12s;
+  }
+  .theme-switch button:hover { border-color: var(--accent); color: var(--text); }
+  .theme-switch button.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 8px rgba(255,71,209,.18);
+  }
+  nav {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 12px var(--pad);
+  }
+  ul.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.nav li a {
+    font-size: 13px;
+    color: var(--muted);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+  }
+  ul.nav li a:hover { color: var(--text); border-bottom-color: var(--accent); text-decoration: none; }
+  main {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 22px var(--pad) 64px;
+  }
+  h1 { font-size: 24px; margin: 0 0 14px; font-weight: 600; }
+  h2 { font-size: 18px; margin: 28px 0 12px; color: var(--text); font-weight: 600; }
+  h3 { font-size: 15px; margin: 18px 0 8px; color: var(--text); font-weight: 600; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 26px 0; }
+  p { margin: 10px 0; }
+  ul, ol { padding-left: 22px; margin: 10px 0; }
+  li { margin: 6px 0; }
+  blockquote {
+    margin: 14px 0;
+    padding: 10px 14px;
+    border-left: 3px solid var(--accent);
+    background: var(--surface);
+    color: var(--muted);
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #ffd580;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { color: var(--muted); font-weight: 600; }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    margin: 10px 0;
+    display: block;
+  }
+  iframe {
+    max-width: 100%;
+    margin: 12px 0;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #000;
+  }
+  .pill {
+    display: inline-block;
+    background: #1a1d24;
+    color: var(--accent);
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid var(--border);
+  }
+
+  /* ---------- CONTENT STYLING ---------- */
+  .content-area {
+    display: block;
+  }
+  .content-area:has(.node):has(.node:nth-child(2):last-child) {
+    display: block;
+  }
+  body.page-education .content-area:has(.node):has(.node:nth-child(2):last-child) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .content-area .node {
+    margin: 0;
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 12px;
+    transition: transform .15s, box-shadow .15s, border-color .15s;
+  }
+  .content-area .node:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    border-color: var(--accent);
+  }
+  .content-area .heading {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+    letter-spacing: 0.2px;
+  }
+  .content-area .pub-card {
+    position: relative;
+    padding: 14px 16px 14px 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    margin: 10px 0;
+  }
+  .content-area .pub-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: var(--accent);
+  }
+  .content-area .meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 10px;
+    font-style: italic;
+  }
+  .content-area .bullets {
+    padding-left: 20px;
+    margin: 0;
+  }
+  .content-area .bullets li {
+    margin: 6px 0;
+    line-height: 1.6;
+  }
+  .content-area .vibe {
+    font-size: 13px;
+    color: var(--accent);
+    opacity: .9;
+    margin-top: 12px;
+  }
+
+  .layout {
+    display: flex;
+    min-height: calc(100vh - 0px);
+  }
+  .sidebar {
+    width: 220px;
+    border-right: 1px solid var(--border);
+    padding: 22px var(--pad);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .sidebar .brand {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: var(--text);
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar li {
+    margin: 6px 0;
+  }
+  .sidebar a {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    padding: 6px 8px;
+    border-left: 2px solid transparent;
+    text-decoration: none;
+  }
+  .sidebar a:hover {
+    color: var(--text);
+    border-left-color: var(--accent);
+    text-decoration: none;
+  }
+  .content-area {
+    flex: 1;
+    padding: 22px var(--pad) 64px;
+    max-width: 100%;
+  }
+  footer {
+    max-width: 100%;
+    margin: 0;
+    padding: 14px var(--pad) 36px;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+
+  /* ---------- VIBE THEMES ---------- */
+  .vibe-zaddy {
+    --bg: #1a0f05;
+    --surface: #2a1a0a;
+    --accent: #ff8c00;
+    --border: #3d2a0a;
+    --link: #ffc87c;
+    --link-visited: #ffb347;
+    --muted: #b37a2a;
+  }
+  .vibe-gdk {
+    --bg: #050a14;
+    --surface: #0a1428;
+    --accent: #4a90d9;
+    --border: #1a3a5c;
+    --link: #6fb8ff;
+    --link-visited: #a0c4ff;
+    --muted: #5a7a9a;
+  }
+  .vibe-dab {
+    --bg: #020d08;
+    --surface: #071c10;
+    --accent: #39ff91;
+    --border: #14663d;
+    --link: #3cff9a;
+    --link-visited: #9df5b7;
+    --muted: #4a8a5e;
+  }
+  .vibe-equinox {
+    --bg: #06040c;
+    --surface: #0c0918;
+    --accent: #ff47d1;
+    --border: #1a1428;
+    --link: #c4b5fd;
+    --link-visited: #a78bfa;
+    --muted: #6b5f8a;
+  }
+</style>
+</head>
+<body class="">
+  <header>
+    <div>
+      <div class="brand">dr. kornpob bhirombhakdi</div>
+      <div class="meta">AI Security Researcher, Educator, and Consultant · bkornpob@gmail.com · ORCID 0000-0003-0136-1281 · <a href="https://bkornpob.github.io">bkornpob.github.io</a></div>
+    </div>
+    <div class="theme-switch">
+      <a href="https://bkornpob.github.io" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:inherit">
+        <img src="assets/Logo_multiverselib-collectives.png" alt="multiverselib-collectives" class="theme-logo">
+        <span class="theme-label">multiverselib-collectives</span>
+      </a>
+      <button data-vibe="vibe-zaddy">zaddy</button>
+      <button data-vibe="vibe-gdk">gdk</button>
+      <button data-vibe="vibe-dab">dab</button>
+      <button data-vibe="vibe-equinox">equinox</button>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">dr. kornpob bhirombhakdi</div>
+      <ul>
+        <li><a href="landing-page.html">page-0 Home</a></li>
+        <li><a href="01-education.html">page-1 Education</a></li>
+      <li><a href="03-employment.html">page-2 Employment</a></li>
+      <li><a href="04-research.html">page-3 Research &amp; Publications</a></li>
+      <li><a href="05-achievements.html">page-4 Achievements</a></li>
+      <li><a href="services.html">page-5 Services</a></li>
+      </ul>
+    </aside>
+    <div class="content-area">
+      <section>
+<h1>Achievements</h1>
+<h2>Judgement Day Phase 1</h2>
+<p><strong>Winner, The Judgement Day — Call for Scenario Challenge (Track 1)</strong> (2026)</p>
+<ul>
+<li><strong>Winning Scenario:</strong> <em>Counter-UAS System — Friendly Fire Decision (IFF Corruption Attack)</em> (Scenario S1).</li>
+<li><strong>Benchmark Suite:</strong> Evaluates multi-sensor correlation failure and friendly fire prevention under operational time pressure.</li>
+<li><strong>Portfolio Context:</strong> Submit 5 scenarios spanning military autonomous systems, space mission knowledge bases, and software supply chains. <a href="https://github.com/bkornpob/THEJUDGEMENTDAY_PHASE1_REFLECTION">Link</a></li>
+<li><strong>Organizers:</strong> AIM Intelligence and Korea AISI, in collaboration with Google DeepMind, Microsoft, University of Oxford, UIUC, UW, UMass Amherst, and the BASI red-teaming community. <a href="https://judgementday.aim-intelligence.com/arena">Link</a></li>
+</ul>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/0roNa6vKYAAseUISxMw6r9?utm_source=generator&si=12898a300dd94034" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<h2>Space Telescope Proposals</h2>
+<p>HST 14 proposals, JWST 6 proposals</p>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+    <img src="assets/05-achievements-1786071466311.webp" alt="hst-proposals" style="width: 70%; height: auto;">
+    <img src="assets/05-achievements-1786071550723.webp" alt="jwst-proposals" style="width: 70%; height: auto;">
+</div>
+
+<h2>ENGRAVE - Electromagnetic counterparts of gravitational wave sources at the Very Large Telescope</h2>
+<p><em>ENGRAVE is a international collaboration bringing together astronomers who use the ESO facilities to research gravitational wave events. It collects over 250 researchers, with both theoretical and observational expertise.</em> <a href="https://www.engrave-eso.org/">Link</a></p>
+<img src="assets/engrave logo.png" alt="engrave-logo" style="width: 30%; height: auto;">
+
+<h2>Bravo! Awards</h2>
+<p>issued by the Space Telescope Science Institute (AURA/NASA)</p>
+<ul>
+<li>Hosting the Loyola University Physics Club on February 20, 2020</li>
+<li>Contributing in Astrogrism Sprint during May 12--21, 2020</li>
+</ul>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+    <img src="assets/bravo-loyola.jpg" alt="bravo-loyola" style="width: 70%; height: auto;">
+    <img src="assets/bravo-astrogrism.jpg" alt="bravo-astrogrism" style="width: 70%; height: auto;">
+</div>
+
+<h2>Graduate Awards</h2>
+<p>2014 -- 2019 — Ohio University, Athens, OH, USA</p>
+<h2>Global Game Jam 2017</h2>
+<p>2017 — as Lead Programmer and Project Coordinator in the project &quot;EchoEcho&quot; with a team at GRID Lab, Ohio University, Athens, OH, USA <a href="https://github.com/bkornpob/EchoEcho">(Link to the project)</a></p>
+<h2>Kendo 2-Dan</h2>
+<p>2017 — issued by All United States Kendo Federation, USA (AUSKF ID: 017666)</p>
+<h2>Executive Course on Social Security</h2>
+<p>2012 — as representative from the Faculty of Economics, Chulalongkorn University, organized by the International Labour Organization (UN), in collaboration with Chulalongkorn University, Bangkok, Thailand</p>
+<h2>Hands-on Training &quot;How to Cost, Finance and Monitor Social Protection Schemes?&quot;</h2>
+<p>2012 — as representative from the Faculty of Economics, Chulalongkorn University, organized by the International Labour Organization (UN), in collaboration with Chulalongkorn University and Health Insurance Research Institute of Thailand, Bangkok, Thailand</p>
+<h2>The Best Paper Awards</h2>
+<p>2012 — titled &quot;Cost of Action, Perceived Intention, Positive Reciprocity, and Signalling Model&quot; at The 6th Asian Business Research Conference between 8--10 April 2012, Bangkok, Thailand, organized by the World Academy of Social Science, Victoria, Australia</p>
+<h2>Associate Fellowship</h2>
+<p>2012 — awarded by the World Academy of Social Science, Victoria, Australia</p>
+<h2>Research Grants</h2>
+<p>2012 — The 90th Anniversary of Chulalongkorn University Fund (Ratchadaphiseksomphot Endowment Fund), Chulalongkorn University, Bangkok, Thailand</p>
+<h2>Brand Ambassador</h2>
+<p>2008 — as Playsmart Idol, organized by NC True Co., Ltd., Thailand <a href="https://www.online-station.net/pc-console-game/102811/">(Link to news article)</a></p>
+<h2>Medical Scholarship Program</h2>
+<p>2004 -- 2013 — Mahidol University, Bangkok, Thailand</p>
+<h2>Gold Medal</h2>
+<p>2002 — National Physics Olympiad Competition, The Promotion of Academic Olympiads, Thailand</p>
+<h2>High Distinction Awards</h2>
+<p>2001 — from the Australian National Chemistry Quiz in the senior division, organized by the Royal Australian Chemical Institute</p>
+<h2>Thailand Representative</h2>
+<p>2001 — Arirang Youth Camp 5th, UNESCO, South Korea</p>
+
+</section>
+    </div>
+  </div>
+  <footer>
+    <span id="themeStatus"></span>
+    <br>
+    <a href="https://bkornpob.github.io" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:inherit">
+      <img src="assets/Logo_multiverselib-collectives.png" alt="multiverselib-collectives" class="theme-logo">
+      <span>multiverselib-collectives</span>
+    </a>
+  </footer>
+  <script>
+    const THEMES = ['vibe-zaddy','vibe-gdk','vibe-dab','vibe-equinox'];
+    const saved = localStorage.getItem('mlc-vibe');
+    if (saved && THEMES.includes(saved)) document.body.classList.add(saved);
+    else { document.body.classList.add('vibe-equinox'); }
+    document.querySelectorAll('.theme-switch button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.body.classList.remove(...THEMES);
+        document.body.classList.add(btn.dataset.vibe);
+        localStorage.setItem('mlc-vibe', btn.dataset.vibe);
+      });
+    });
+
+    const contentArea = document.querySelector('.content-area');
+    if (contentArea) {
+      const headings = Array.from(contentArea.querySelectorAll('h1, h2'));
+      if (headings.length > 0) {
+        const frag = document.createDocumentFragment();
+        headings.forEach((heading, idx) => {
+          const wrap = document.createElement('div');
+          wrap.className = 'node';
+          const headingDiv = document.createElement('div');
+          headingDiv.className = 'heading';
+          headingDiv.innerHTML = heading.outerHTML;
+          wrap.appendChild(headingDiv);
+
+          const next = headings[idx + 1];
+          let sibling = heading.nextElementSibling;
+          while (sibling && sibling !== next) {
+            const clone = sibling.cloneNode(true);
+            wrap.appendChild(clone);
+            sibling = sibling.nextElementSibling;
+          }
+          frag.appendChild(wrap);
+        });
+        contentArea.innerHTML = '';
+        contentArea.appendChild(frag);
+      }
+    }
+  </script>
+</body>
+</html>

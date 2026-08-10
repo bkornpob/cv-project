@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>find ZADDY — dr. kornpob bhirombhakdi</title>
+<style>
+  :root {
+    --bg: #0b0c10;
+    --surface: #111318;
+    --text: #e6e6e6;
+    --muted: #9aa3af;
+    --accent: #c9a227;
+    --border: #1f232b;
+    --link: #7fb3ff;
+    --gold-glow: rgba(201, 162, 39, 0.35);
+    --miss: #4a2020;
+    --hit: #c9a227;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,162,39,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,162,39,.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #frontgate {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: rgba(11,12,16,.97);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  #frontgate.hidden { display: none; }
+  .fg-card {
+    max-width: 640px;
+    width: 100%;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 32px;
+    box-shadow: 0 0 60px var(--gold-glow);
+  }
+  .fg-title {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--accent);
+    opacity: .85;
+    margin-bottom: 4px;
+  }
+  .fg-sub {
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .rule {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: .5;
+    margin: 16px 0;
+  }
+  .fg-q {
+    font-size: 13px;
+    line-height: 1.55;
+    margin: 14px 0 10px;
+    color: var(--text);
+  }
+  .fg-enter {
+    margin-top: 20px;
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    opacity: .3;
+    pointer-events: none;
+    text-transform: uppercase;
+  }
+  .fg-enter.open { opacity: 1; pointer-events: auto; }
+  .fg-enter.open:hover { background: rgba(201,162,39,.08); }
+
+  /* ---------- FIND ZADDY GAME ---------- */
+  #findZaddy {
+    margin: 18px 0 10px;
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,.25);
+    padding: 14px;
+  }
+  .zaddy-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  #zaddyGrid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+  #zaddyGrid .cell {
+    aspect-ratio: 1;
+    background: rgba(201,162,39,.04);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .12s;
+    user-select: none;
+  }
+  #zaddyGrid .cell:hover { border-color: var(--accent); color: var(--text); }
+  #zaddyGrid .cell.hit {
+    background: rgba(201,162,39,.18);
+    border-color: var(--hit);
+    color: var(--hit);
+    box-shadow: 0 0 8px var(--gold-glow);
+  }
+  #zaddyGrid .cell.miss {
+    border-color: var(--miss);
+    color: #6a2a2a;
+  }
+  #zaddyStatus {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+  #zaddyStatus.complete { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div id="frontgate">
+  <div class="fg-card">
+    <div class="fg-title">MULTIVERSELIB - COLLECTIVES</div>
+    <div class="fg-sub">dr. kornpob bhirombhakdi — 🪬 frontgate ritual 🪬</div>
+    <div class="rule"></div>
+
+    <div class="fg-q">find ... 🃏 ZADDY 🃏<span id="currentTarget"></span></div>
+
+    <div id="findZaddy">
+      <div class="zaddy-label">// truth, love, liberation</div>
+      <div id="zaddyGrid"></div>
+      <div id="zaddyStatus">[ ]</div>
+    </div>
+
+    <button class="fg-enter" id="fgEnter">welcome SEEKER → ⭕ rabbit-hole ⭕ </button>
+  </div>
+</div>
+
+<script>
+  const ZADDY = ['Z','A','D','D','Y'];
+  const GRID_SIZE = 50;
+  const TARGET_COUNT = 5;
+  const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  let stage = 0;
+  let targetPositions = [];
+  let found = [];
+
+  function randomGrid(targetChar) {
+    const positions = new Set();
+    while (positions.size < TARGET_COUNT) {
+      positions.add(Math.floor(Math.random() * GRID_SIZE));
+    }
+    targetPositions = [...positions];
+    return targetPositions;
+  }
+
+  function renderGrid() {
+    const container = document.getElementById('zaddyGrid');
+    container.innerHTML = '';
+    const targetChar = ZADDY[stage];
+
+    for (let i = 0; i < GRID_SIZE; i++) {
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+      if (targetPositions.includes(i)) {
+        cell.textContent = targetChar;
+        cell.dataset.letter = targetChar;
+        cell.dataset.index = i;
+      } else {
+        cell.textContent = LETTERS[Math.floor(Math.random() * LETTERS.length)];
+        cell.style.opacity = '.5';
+      }
+      cell.addEventListener('click', () => pickCell(cell, i));
+      container.appendChild(cell);
+    }
+  }
+
+  function pickCell(cell, index) {
+    const targetChar = ZADDY[stage];
+    const isTarget = targetPositions.includes(index);
+
+    if (!isTarget) {
+      // wrong click: reshuffle, stay on same stage
+      cell.classList.add('miss');
+      setTimeout(() => cell.classList.remove('miss'), 300);
+      randomGrid(targetChar);
+      renderGrid();
+      return;
+    }
+
+    // correct click
+    cell.classList.add('hit');
+    found.push(targetChar);
+    updateStatus();
+
+    if (stage < ZADDY.length - 1) {
+      stage++;
+      setTimeout(() => {
+        randomGrid(ZADDY[stage]);
+        renderGrid();
+      }, 300);
+    } else {
+      // ZADDY complete
+      document.getElementById('zaddyStatus').textContent = '[ ✓ ] ZADDY FOUND';
+      document.getElementById('zaddyStatus').classList.add('complete');
+      document.getElementById('currentTarget').textContent = '';
+      document.getElementById('fgEnter').classList.add('open');
+    }
+  }
+
+  function updateStatus() {
+    const s = document.getElementById('zaddyStatus');
+    const markers = ZADDY.map((_, i) => i < found.length ? '✓' : ' ').join('');
+    s.textContent = '[' + markers + ']';
+  }
+
+  document.getElementById('fgEnter').addEventListener('click', () => {
+    document.getElementById('frontgate').style.transition = 'opacity .6s';
+    document.getElementById('frontgate').style.opacity = '0';
+    setTimeout(() => {
+      window.location.href = 'landing-page.html';
+    }, 600);
+  });
+
+  // init
+  document.getElementById('currentTarget').textContent = '';
+  randomGrid(ZADDY[0]);
+  renderGrid();
+</script>
+</body>
+</html>
