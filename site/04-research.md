@@ -1,7 +1,3 @@
----
-title: "Research & Publications"
----
-
 # Research & Publications
 
 ## Software and Applications
