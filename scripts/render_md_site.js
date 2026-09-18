@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
 
-const root = path.resolve('/home/equinox/multiverselib-collectives/cv-project/site');
-const outDir = path.resolve('/home/equinox/multiverselib-collectives/cv-project/docs');
+const root = path.resolve('/home/equinox/protocol-aries-mode/the-codex/cv-project/site');
+const outDir = path.resolve('/home/equinox/protocol-aries-mode/the-codex/cv-project/docs');
 
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
