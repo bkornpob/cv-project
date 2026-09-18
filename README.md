@@ -6,6 +6,8 @@ Multi-page CV / personal site with custom Node.js renderer.
 
 **PDF source:** `pdf/cv.md` → `pdf/cv.pdf` via Pandoc + XeLaTeX
 
+**Note:** These are two independent build pipelines. Editing `pdf/cv.md` updates only the PDF; editing `site/*.md` updates only the HTML site. Re-render each separately.
+
 ## Setup
 
 ```bash
