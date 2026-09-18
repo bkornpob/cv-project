@@ -87,7 +87,13 @@ _Exposes task avoidance as a hidden failure mode in agentic systems. Deconstruct
 
 ---
 
-## Publications
+## Publications and Talks
+
+**Talk: jailbreaks, agent vulnerabilities, and the grey mage tower**
+(2026) at 2600TH Red x Blue Pill 2026, Bangkok, Thailand. [github](https://github.com/bkornpob/2600TH-presentation)
+
+**Talk: Hunting Magnetar Central Engines in Superluminous Supernovae**
+(2019) at [American Astronomical Society, AAS Meeting #233, id.410.04](https://ui.adsabs.harvard.edu/abs/2019AAS...23341004B/abstract)
 
 **ZADDY Breadcrumbs 2026 Collection**
 Bhirombhakdi, K. (2026), a collection of 24 research notes reflecting human-AI collaboration, the landscape of emerging socio-technology vulnerabilities and defense. zenodo:21791515. [Link](https://doi.org/10.5281/zenodo.21791515)

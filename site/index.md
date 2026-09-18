@@ -23,6 +23,10 @@
 <div>
 ## recent bits
 
+Talk: jailbreaks, agent vulnerabilities, and the grey mage tower
+(2026), 2600TH Red x Blue Pill 2026, Bangkok, Thailand. 
+[github](https://github.com/bkornpob/2600TH-presentation)
+
 Spellbook of Jailbreak and Agent Vulnerabilities ([Zenodo:21665118](https://doi.org/10.5281/zenodo.21665118) + [Page](https://bkornpob.github.io/spellbook-of-jailbreak-and-agent-vulnerabilities/) + [Spotify](https://open.spotify.com/show/033XXOu3WvDSc484jv24Hx?si=d4cfbfa9d41c4d2c) + [Youtube](https://www.youtube.com/playlist?list=PLHoOQkUH707g)
 ) <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://www.youtube.com/embed/yWlcNBe8aBE?si=WULuq3E0qeHHUlkG" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 

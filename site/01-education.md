@@ -43,6 +43,22 @@ GPA: 4.0
 
 ## Certifications & Training
 
+### Quantum Computing
+
+**IBM** 2026
+
+Courses:
+- [Using a Quantum Computer]
+  (https://www.credly.com/badges/67c4c70c-02c6-400f-a3d9-bbd50cf7844d)
+- [Basics of Quantum Information]
+  (https://www.credly.com/badges/d75d606b-48fb-4ab4-8ac2-7fe55a852fc5)
+
+### Global MOOC on the Ethics of AI
+
+unesco — ID: [46ZWJV9V0OPK](https://coursera.org/verify/46ZWJV9V0OPK)
+
+Sep 2026
+
 ### Certified in Cybersecurity
 
 **ISC2** — ID: [3153050](https://my.isc2.org/digitalcert?_gl=1*fl1nys*_gcl_au*MTA5NjMxNTE1NS4xNzY0ODM4ODk2*_ga*MzUyMjUyMzM0LjE3NjQ4Mzg4OTY.*_ga_7V1PGHSZT0*czE3NjQ4Mzg5NzUkajU5JGwwJGgxMjI0ODk5Nzc1)
