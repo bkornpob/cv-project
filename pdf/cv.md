@@ -16,6 +16,7 @@ AI Security Researcher, Educator, and Consultant — dual PhDs (Astrophysics + M
 
 ## recent bits
 
+- **2600TH Red x Blue Pill 2026 (talk): jailbreaks, agent vulnerabilities, and the grey mage tower** — [github](https://github.com/bkornpob/2600TH-presentation)
 - **Spellbook of Jailbreak and Agent Vulnerabilities** — [Zenodo:21665118](https://doi.org/10.5281/zenodo.21665118) · [Page](https://bkornpob.github.io/spellbook-of-jailbreak-and-agent-vulnerabilities/) · [Spotify](https://open.spotify.com/show/033XXOu3WvDSc484jv24Hx) · [Youtube](https://www.youtube.com/playlist?list=PLHoOQkUH707g)
 - **The Judgement Day 2026 Phase-1 Scenario Submission** — [GitHub](https://github.com/bkornpob/THEJUDGEMENTDAY_PHASE1_REFLECTION) · [Spotify](https://open.spotify.com/show/0340zu7KTOlOcVBdv95hrt) · [Youtube](https://youtube.com/playlist?list=PLAe0qVVdVUQQ)
 - **Goodboy Recon** — [Github](https://github.com/bkornpob/RT101-AI-Security-and-Red-Teaming/blob/main/published-articles/be-good-boy/goodboyd-recon-technical.md) · [Medium](https://dr-kb.medium.com/be-good-boy-62c485bb3a70)
@@ -43,6 +44,10 @@ AI Security Researcher, Educator, and Consultant — dual PhDs (Astrophysics + M
 
 ## Certifications and Training
 
+- **Quantum Computing** | IBM | 2026
+	*Using a Quantum Computer* 
+	*Basics of Quantum Information* 
+- **Global MOOC on the Ethics of AI** | unesco | Sep 2026 | ID: [46ZWJV9V0OPK](https://cour sera.org/ver ify/46ZWJV9V0OPK)
 - **Certified in Cybersecurity** | ISC2 | Jan 2026 – Dec 2028 | ID: [3153050](https://my.isc2.org/digitalcert?_gl=1*fl1nys*_gcl_au*MTA5NjMxNTE1NS4xNzY0ODM4ODk2*_ga*MzUyMjUyMzM0LjE3NjQ4Mzg4OTY.*_ga_7V1PGHSZT0*czE3NjQ4Mzg5NzUkajU5JGwwJGgxMjI0ODk5Nzc1)
 - **BASI Research Contributor** | Oct 2025 – present
 - **Cybersecurity Trainings** | THNCA+NCSA Thailand 2025
@@ -121,7 +126,10 @@ AI Security Researcher, Educator, and Consultant — dual PhDs (Astrophysics + M
 - substack: [substack.com/@bkornpob](https://substack.com/@bkornpob)
 - medium: [dr-kb.medium.com](https://dr-kb.medium.com/)
 
-### Publications
+### Publications and Talks
+
+- **Talk: jailbreaks, agent vulnerabilities, and the grey mage tower** | (2026)
+	2600TH Red x Blue Pill 2026, Bangkok, Thailand
 
 - **ZADDY Breadcrumbs 2026 Collection** | Bhirombhakdi, K. (2026)
 	zenodo:21791515. [Link](https://doi.org/10.5281/zenodo.21791515)
