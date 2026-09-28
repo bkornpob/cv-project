@@ -20,6 +20,7 @@ Human-AI collaboration, AI literacy, AI ethics, AI governance, AI safety, AI vul
 - [bkornpob.github.io](https://bkornpob.github.io)
 - [kbhirombhakdi.weebly.com](https://kbhirombhakdi.weebly.com/)
 - [ORCID: 0000-0003-0136-1281](https://orcid.org/0000-0003-0136-1281)
+- [IMDb](https://www.imdb.com/name/nm3594521/)
 
 ### recent bits
 - **Certified Quantum Computing with IBM Quantum Platform** — [Link](https://quantum.cloud.ibm.com/learning/en)
@@ -32,17 +33,21 @@ Human-AI collaboration, AI literacy, AI ethics, AI governance, AI safety, AI vul
 
 ## Education
 - **Ph.D. Physics** | Ohio University, Athens, OH USA | 2014--2019
-	*Light Curve Powering Mechanism of Superluminous Supernovae*
+	- *Light Curve Powering Mechanism of Superluminous Supernovae*
 - **M.S. Physics** | Ohio University, Athens, OH USA | 2014--2015
-	*GPA: 3.951*
+	- *Project: Theoretical Studies on Nanophysics Material Properties within Complex Dielectric Environments and Multiphase Configurations*
+	- *Recipient of Graduate Awards*
 - **Physics Pre-Degree** | Ramkhamhaeng University, Bangkok TH | 2013--2014
-	*GPA: 4.0*
+	- *Project: Independent Study on General Relativity Theory*
 - **Ph.D. Economics** | Chulalongkorn University, Bangkok TH | 2009--2013
-	*Game Theory & Experimental Studies on Reciprocity*
+	- *Mechanism Design and Game Theory + Experimental Economics*
+	- *Studies on reciprocity and coopative-decision drives*
+	- *Recipient of The 90th Anniversary of Chulalongkorn University Fund*
 - **M.S. Health Economics** | Chulalongkorn University, Bangkok TH | 2007--2009
-	*Technical Efficiency of University Hospitals*
+	- *Technical Efficiency of University Hospitals*
 - **B.S. Medical Science** | Siriraj Hospital, Mahidol University, Bangkok TH | 2003--2007
-	*Second Class Honours*
+	- *Second Class Honours*
+	- *Recipient of Medical Scholarship Program*
 
 ---
 
